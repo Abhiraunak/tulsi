@@ -1,12 +1,9 @@
-import Appbar from "@/components/Appbar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-neutral-300 to-stone-400 w-full h-screen">
-      <Appbar />
-
+    <>
       {/* Center Content */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
         <div className="max-w-screen-xl mx-auto text-center space-y-6">
@@ -35,6 +32,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

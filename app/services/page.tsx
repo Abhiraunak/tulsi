@@ -2,9 +2,12 @@ import Appbar from "@/components/Appbar";
 
 export default function Services(){
     return (
-        <div className="bg-gradient-to-r from-neutral-300 to-stone-400 w-full h-screen">
-            <Appbar/>
-            hi from services page
+        <div>
+            
+            <div>
+                hi from service page
+            </div>
+            
         </div>
     );
 }
