@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SquareArrowOutUpRight } from 'lucide-react';
 
 interface CardProps {
     imageSrc: string;
@@ -22,15 +23,16 @@ export default function ServiceBlock({ imageSrc, title, alt }: CardProps) {
                     src={imageSrc}
                     alt={alt || "Card Image"}
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="contain"
                 />
             </div>
 
             {/* Text Section */}
-            <div className="h-1/4 w-full flex items-center justify-center bg-gray-100">
+            <div className="h-1/4 w-full flex items-center justify-evenly bg-gray-100">
                 <p className="text-lg font-semibold text-gray-700">
                     {title}
                 </p>
+                <SquareArrowOutUpRight />
             </div>
         </div>
     );
