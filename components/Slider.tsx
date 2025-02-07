@@ -22,7 +22,7 @@ export default function Slider({ image }: SliderProps) {
                 alt={image} 
                 width={500}  // Adjust width dynamically based on image
                 height={300} // Adjust height dynamically based on image
-                style={{ objectFit: "cover" }} 
+                style={{ objectFit: "contain" }} 
                 className="min-h-32"
             />
         </motion.div>

@@ -16,6 +16,7 @@ export default function ServiceBlock({ imageSrc, title, alt }: CardProps) {
                         shadow-lg 
                         overflow-hidden 
                         flex flex-col items-center justify-center 
+                        border-2 border-gray-300
                         ">
             {/* Image Section */}
             <div className="w-full h-3/4 relative">
@@ -28,11 +29,11 @@ export default function ServiceBlock({ imageSrc, title, alt }: CardProps) {
             </div>
 
             {/* Text Section */}
-            <div className="h-1/4 w-full flex items-center justify-evenly bg-gray-100">
-                <p className="text-lg font-semibold text-gray-700">
+            <div className="h-1/4 w-full flex items-center justify-evenly bg-black">
+                <p className="text-lg font-semibold text-white">
                     {title}
                 </p>
-                <SquareArrowOutUpRight />
+                <SquareArrowOutUpRight className="bg-white" />
             </div>
         </div>
     );
