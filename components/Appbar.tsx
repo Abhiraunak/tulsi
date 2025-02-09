@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export default function Appbar() {
     return (
-        <div className='max-w-screen-xl mx-auto h-[80px] flex items-center justify-between border-b-[1px] border-zinc-700 px-4'>
+        <div className='max-w-screen-xl mx-auto h-[80px] flex items-center justify-between border-b-[1px] border-zinc-400 px-4'>
             <div className="nleft flex items-center">
                 <Link href={"/"} >
                     <Image

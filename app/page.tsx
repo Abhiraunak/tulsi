@@ -31,8 +31,8 @@ export default function Home() {
 
       {/* Main Content */}
       <div>
-        <main className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-          <div className="max-w-screen-xl mx-auto text-center space-y-6 sm:space-y-2">
+        <main className="absolute w-full  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+          <div className="max-w-screen-xl pt-10 mx-auto text-center space-y-6 sm:space-y-2 ">
             <h1 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">
               From Concept to Reality, We Build Your Vision
             </h1>
@@ -43,16 +43,17 @@ export default function Home() {
             <div className="flex justify-center gap-6 lg:gap-14 pt-10 sm:pt-2">
               <Link href="/services">
                 <Button
-                  className="bg-gray-700 hover:bg-gray-800 text-white drop-shadow-xl px-6 min-w-[120px]"
+                  className="bg-black hover:bg-black hover:ring-4 hover:ring-violet-400 text-white font-semibold drop-shadow-xl px-8 py-3 min-w-[240px] text-lg"
                   aria-label="View Our Services"
                 >
                   Services
                 </Button>
+
               </Link>
 
               <Link href="/about">
                 <Button
-                  className="bg-stone-100 hover:bg-stone-300 text-black border-4 border-gray-500 drop-shadow-xl px-6 min-w-[120px]"
+                  className="bg-white border-solid border-black hover:bg-white hover:ring-2 hover:ring-slate-950 text-black font-semibold drop-shadow-xl px-8 py-3 min-w-[240px] text-lg"
                   aria-label="Learn About Us"
                 >
                   About Us
