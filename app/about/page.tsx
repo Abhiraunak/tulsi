@@ -2,8 +2,6 @@ import { images } from "@/components/image";
 import ServiceBlock from "@/components/ServiceBlock";
 import Slider from "@/components/Slider";
 
-
-
 export default function About() {
 
     return (

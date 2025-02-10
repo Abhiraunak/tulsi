@@ -23,14 +23,12 @@ export default function Home() {
           property="og:description"
           content="From concept to reality, we build your vision. Expert architecture & renovation solutions tailored for you."
         />
-        <meta property="og:url" content="https://www.yourwebsite.com" />
+        <meta property="og:url" content="https://www.yourwebsite.com" /> //Replace with the website domain
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.yourwebsite.com/preview.jpg" />
+        <meta property="og:image" content="https://www.yourwebsite.com/preview.jpg" /> // replace with the website preview image aka logo
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Main Content */}
-      <div>
         <main className="absolute w-full  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
           <div className="max-w-screen-xl pt-10 mx-auto text-center space-y-6 sm:space-y-2 ">
             <h1 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">
@@ -48,7 +46,6 @@ export default function Home() {
                 >
                   Services
                 </Button>
-
               </Link>
 
               <Link href="/about">
@@ -62,7 +59,6 @@ export default function Home() {
             </div>
           </div>
         </main>
-      </div>
     </>
   );
 }
