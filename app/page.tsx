@@ -29,7 +29,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {/* Main Content */}
-        <main className="absolute w-full  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+        <main className="relative w-full  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
           <div className="max-w-screen-xl pt-10 mx-auto text-center space-y-6 sm:space-y-2 ">
             <h1 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">
               From Concept to Reality, We Build Your Vision
@@ -59,6 +59,12 @@ export default function Home() {
             </div>
           </div>
         </main>
+        <div className="relative pt-10">
+          <div className="flex flex-col items-center">
+            <h3>What we do</h3>
+            <h2>Our Expertise</h2>
+          </div>
+        </div>
     </>
   );
 }
