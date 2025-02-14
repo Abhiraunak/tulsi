@@ -1,3 +1,4 @@
+import Appbar from "@/components/Appbar";
 import { images } from "@/components/image";
 import ServiceBlock from "@/components/ServiceBlock";
 import Slider from "@/components/Slider";
@@ -6,6 +7,7 @@ export default function About() {
 
     return (
         <div>
+            <Appbar/>
             <div className="w-full max-w-screen-lg overflow-hidden flex mx-auto">
                 {[...images, ...images].map((img, idx) => (
                     <Slider image={img} key={idx} />

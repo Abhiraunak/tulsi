@@ -1,12 +1,14 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Head from "next/head";
+// import Head from "next/head";
+import { WorkPortfolio } from "@/components/WorkPortfolio";
+import Appbar from "@/components/Appbar";
+
 
 export default function Home() {
   return (
     <>
       {/* SEO Meta Tags */}
-      <Head>
+      {/* <Head>
         <title>Expert Architecture & Renovation | Tulsi</title>
         <meta
           name="description"
@@ -27,44 +29,79 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.yourwebsite.com/preview.jpg" /> // replace with the website preview image aka logo
         <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      </Head> */}
       {/* Main Content */}
-        <main className="relative w-full  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-          <div className="max-w-screen-xl pt-10 mx-auto text-center space-y-6 sm:space-y-2 ">
-            <h1 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">
-              From Concept to Reality, We Build Your Vision
-            </h1>
-            <h2 className="px-4 text-2xl tracking-tighter opacity-50">
-              Expert Architecture & Renovation Solutions Tailored for You
-            </h2>
+      <main className="relative w-full h-[35rem]  bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_2px,transparent_1px)] bg-[size:6rem_4rem]">
+        <Appbar />
+        <div className="container max-w-screen-xl mx-auto pt-[5rem] text-center space-y-6 sm:space-y-2">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold lg:font-semibold md:font-semibold tracking-tight">
+            From Concept to Reality, We Build Your Vision
+          </h1>
+          <h2 className="text-lg md:text-xl tracking-tighter font-semibold opacity-50">
+            Expert Architecture & Renovation Solutions Tailored for You
+          </h2>
 
-            <div className="flex justify-center gap-6 lg:gap-14 pt-10 sm:pt-2">
-              <Link href="/services">
-                <Button
-                  className="bg-black hover:bg-black hover:ring-4 hover:ring-violet-400 text-white font-semibold drop-shadow-xl px-8 py-3 min-w-[240px] text-lg"
-                  aria-label="View Our Services"
-                >
-                  Services
-                </Button>
-              </Link>
+          <div className="flex justify-center gap-6 lg:gap-14 pt-10 sm:pt-2">
+            <Link href="/services">
+              <button className="px-10 py-2 lg:min-w-[240px] bg-slate-600 hover:bg-slate-800 rounded-lg font-semibold text-white lg:text-xl text-center">
+                Service
+              </button>
+            </Link>
 
-              <Link href="/about">
-                <Button
-                  className="bg-white border-solid border-black hover:bg-white hover:ring-2 hover:ring-slate-950 text-black font-semibold drop-shadow-xl px-8 py-3 min-w-[240px] text-lg"
-                  aria-label="Learn About Us"
-                >
-                  About Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </main>
-        <div className="relative pt-10">
-          <div className="flex flex-col items-center">
-            <h3>What we do</h3>
-            <h2>Our Expertise</h2>
+            <Link href="/about">
+              <button className="px-10 py-2 lg:min-w-[240px] border-2 border-slate-600 rounded-lg font-semibold text-black lg:text-xl text-center">
+                About tulsi
+              </button>
+            </Link>
           </div>
         </div>
+      </main>
+      <div className="container relative pt-[100px]">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -inset-[10px] opacity-50">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl animate-blob" />
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-pink-500/30 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
+            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/30 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" />
+          </div>
+        </div>
+        <div className="flex flex-col items-center">
+          <h3 className="text-2xl tracking-tight sm:text-xl sm:tracking-tighter opacity-50">What we do</h3>
+          <h2 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">Our Expertise</h2>
+        </div>
+        <div className="max-w-screen-xl mx-auto flex flex-col mt-[80px] pb-10">
+          <div className="grid grid-cols-1 gap-10 justify-center items-center">
+            <div className="flex flex-wrap justify-center gap-10">
+              <WorkPortfolio
+                title="WallPaint"
+                paragraph="Wall paint enhances aesthetics, protects surfaces, and adds durability. 
+                          Our expert architects ensure flawless finishes, transforming spaces with vibrant colors"
+                BgImageUrl="/Walllpaint.jpg"
+              />
+              <WorkPortfolio
+                title="Wall Panels"
+                paragraph="Wall panels enhance interiors with stylish, durable designs, providing insulation, noise reduction, 
+                          and aesthetic appeal for modern architectural spaces."
+                BgImageUrl="/Wallpanels.jpg"
+              />
+              <WorkPortfolio
+                title="False Celling"
+                paragraph="Enhance aesthetics and functionality with false ceilings, offering improved lighting, insulation, and modern designs for residential and commercial spaces."
+                BgImageUrl="/Falsee.jpg"
+              />
+              <WorkPortfolio
+                title="Wallpaper"
+                paragraph="Elevate interiors with premium wallpapers, adding texture, color, and personality to walls for a stylish and elegant look"
+                BgImageUrl="/wallppaper.jpg"
+              />
+              <WorkPortfolio
+                title="Flooring"
+                paragraph="Upgrade spaces with high-quality flooring solutions, ensuring durability, style, and comfort for homes, offices, and commercial environments."
+                BgImageUrl="/Flooring.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
