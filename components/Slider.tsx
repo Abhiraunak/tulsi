@@ -15,7 +15,7 @@ export default function Slider({ image }: SliderProps) {
             key={image}
             initial={{ x: direction === "left" ? "0" : "-100%" }}
             animate={{ x: direction === "left" ? "-100%" : "0" }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 100}}
         >
             <Image 
                 src={image} 

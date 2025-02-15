@@ -1,14 +1,13 @@
 import Link from "next/link";
-// import Head from "next/head";
+import Head from "next/head";
 import { WorkPortfolio } from "@/components/WorkPortfolio";
 import Appbar from "@/components/Appbar";
-
 
 export default function Home() {
   return (
     <>
       {/* SEO Meta Tags */}
-      {/* <Head>
+      <Head>
         <title>Expert Architecture & Renovation | Tulsi</title>
         <meta
           name="description"
@@ -29,7 +28,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.yourwebsite.com/preview.jpg" /> // replace with the website preview image aka logo
         <meta name="twitter:card" content="summary_large_image" />
-      </Head> */}
+      </Head>
       {/* Main Content */}
       <main className="relative w-full h-[35rem]  bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_2px,transparent_1px)] bg-[size:6rem_4rem]">
         <Appbar />
@@ -68,9 +67,9 @@ export default function Home() {
           <h3 className="text-2xl tracking-tight sm:text-xl sm:tracking-tighter opacity-50">What we do</h3>
           <h2 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">Our Expertise</h2>
         </div>
-        <div className="max-w-screen-xl mx-auto flex flex-col mt-[80px] pb-10">
+        <div className="max-w-screen-xl mx-auto flex flex-col mt-[80px]">
           <div className="grid grid-cols-1 gap-10 justify-center items-center">
-            <div className="flex flex-wrap justify-center gap-10">
+            <div className="flex flex-wrap justify-center gap-[50px]">
               <WorkPortfolio
                 title="WallPaint"
                 paragraph="Wall paint enhances aesthetics, protects surfaces, and adds durability. 

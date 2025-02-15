@@ -7,11 +7,14 @@ export default function About() {
 
     return (
         <div>
-            <Appbar/>
-            <div className="w-full max-w-screen-lg overflow-hidden flex mx-auto">
+            <Appbar />
+            <div className="w-full max-w-screen-lg overflow-hidden flex mx-auto relative">
                 {[...images, ...images].map((img, idx) => (
                     <Slider image={img} key={idx} />
                 ))}
+                <h1 className="text-white text-4xl uppercase font-bold z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    Our Work
+                </h1>
             </div>
 
             {/* Heading */}
