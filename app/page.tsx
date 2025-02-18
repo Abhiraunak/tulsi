@@ -2,6 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { WorkPortfolio } from "@/components/WorkPortfolio";
 import Appbar from "@/components/Appbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="container relative pt-[100px]">
+      <div className="container relative pt-[100px] mb-10">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -inset-[10px] opacity-50">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl animate-blob" />
@@ -101,6 +102,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="relative w-full">
+          <Footer />
+        </div>
     </>
   );
 }
