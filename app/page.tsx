@@ -68,7 +68,7 @@ export default function Home() {
           <h3 className="text-2xl tracking-tight sm:text-xl sm:tracking-tighter opacity-50">What we do</h3>
           <h2 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">Our Expertise</h2>
         </div>
-        <div className="max-w-screen-xl mx-auto flex flex-col mt-[80px]">
+        <div className="max-w-screen-xl mx-auto flex flex-col mt-[85px]">
           <div className="grid grid-cols-1 gap-10 justify-center items-center">
             <div className="flex flex-wrap justify-center gap-[50px]">
               <WorkPortfolio
