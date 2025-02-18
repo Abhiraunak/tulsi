@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 export default function Appbar() {
     return (
@@ -9,7 +8,7 @@ export default function Appbar() {
             <div className="nleft flex items-center">
                 <Link href={"/"} >
                     <Image
-                        src="/tulsi-logo.png"
+                        src="/tulsi-logo1.png"
                         width={100}
                         height={100}
                         alt="tulsi-logo"
