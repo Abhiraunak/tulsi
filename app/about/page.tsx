@@ -2,6 +2,7 @@ import Appbar from "@/components/Appbar";
 import { images } from "@/components/image";
 import ServiceBlock from "@/components/ServiceBlock";
 import Slider from "@/components/Slider";
+import { Testonomial } from "@/components/Testonomial";
 
 export default function About() {
 
@@ -28,6 +29,11 @@ export default function About() {
                 <ServiceBlock imageSrc="/wallPaper.png" title="Wallpaper" alt="Wallpaper Service" />
                 <ServiceBlock imageSrc="/false-celling.png" title="False Ceiling" alt="False Ceiling Service" />
             </div>
+            <div className="relative">
+                <Testonomial />
+            </div>
         </div>
+
     );
 }
+
