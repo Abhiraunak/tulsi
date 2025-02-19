@@ -24,6 +24,6 @@ export const WorkService = () => {
                     </Carousel>
                 </Card>
             </div>
-            </div>
+        </div>
     )
 }

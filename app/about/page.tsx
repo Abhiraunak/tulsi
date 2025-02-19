@@ -1,4 +1,5 @@
 import Appbar from "@/components/Appbar";
+import Footer from "@/components/Footer";
 import { images } from "@/components/image";
 import ServiceBlock from "@/components/ServiceBlock";
 import Slider from "@/components/Slider";
@@ -31,6 +32,9 @@ export default function About() {
             </div>
             <div className="relative">
                 <Testonomial />
+            </div>
+            <div className="relative">
+                <Footer />
             </div>
         </div>
 
