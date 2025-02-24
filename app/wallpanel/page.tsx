@@ -3,36 +3,44 @@ import React from "react";
 import { ContainerScroll } from "@/components/ContainerScroll";
 import Image from "next/image";
 import Appbar from "@/components/Appbar";
+import ProductDescription from "@/components/ProductDescription";
 
 export default function Wallpanels() {
     return (
-        <main>
-            <Appbar/>
-            <div className="flex flex-col overflow-hidden">
-                <ContainerScroll
-                    titleComponent={
-                        <>
-                            <h1 className="text-4xl font-semibold text-black dark:text-white">
+        <>
+            <main>
+                <Appbar />
+                <div className="flex flex-col overflow-hidden">
+                    <ContainerScroll
+                        titleComponent={<>
+                            <h1 className="text-4xl font-semibold text-black">
                                 Your Walls, Your Canvas <br />
                                 <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                                    Let’s Paint a Masterpiece!
+                                    Let's Paint a Masterpiece!
                                 </span>
                             </h1>
-                        </>
-                    }
-                >
-                    <Image
-                        src={`/Panels1.png`}
-                        alt="hero"
-                        height={720}
-                        width={720}
-                        className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                        draggable={false}
-                    />
-                </ContainerScroll>
-            </div>
+                        </>}
+                    >
+                        <Image
+                            src={`/Panels1.png`}
+                            alt="hero"
+                            height={720}
+                            width={720}
+                            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+                            draggable={false} />
+                    </ContainerScroll>
+                </div>
+            </main>
+            <section className="container relative max-w-screen-xl mx-auto">
+                <h1 className="text-2xl font-semibold mb-6">Browse Space</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <ProductDescription imageUrl={"/Wallpanels.jpg"} description={"Wallpanel"} />
+                    <ProductDescription imageUrl={"/Wallpanels.jpg"} description={"Wallpanel"} />
+                    <ProductDescription imageUrl={"/Wallpanels.jpg"} description={"Wallpanel"} />
+                </div>
+            </section>
+        </>
 
-        </main>
 
     );
 }
