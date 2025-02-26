@@ -4,6 +4,7 @@ import { ContainerScroll } from "@/components/ContainerScroll";
 import Image from "next/image";
 import Appbar from "@/components/Appbar";
 import ProductDescription from "@/components/ProductDescription";
+import ProductBetween from "@/components/ProductBetween";
 
 export default function Wallpanels() {
     return (
@@ -39,6 +40,16 @@ export default function Wallpanels() {
                     <ProductDescription imageUrl={"/Wallpanels.jpg"} description={"Wallpanel"} />
                 </div>
             </section>
+            <div className="container relative max-w-screen-2xl mx-auto pt-20 pb-10">
+                <ProductBetween 
+                    imageUrl={"/wallppaper.jpg"} 
+                    headingText={"Style it your way"} 
+                    bottomText={"Shape your spaces with most soothing trends & make a statement like never before"} 
+                    buttonText={"Browse all space"} 
+                    to={"/"} 
+                />
+
+            </div>
         </>
 
 
