@@ -7,9 +7,10 @@ interface WorkPortfolioProps {
     BgImageUrl: string;
     title: string;
     paragraph: string;
+    to : string;
 }
 
-export function WorkPortfolio({ title, BgImageUrl, paragraph }: WorkPortfolioProps) {
+export function WorkPortfolio({ title, BgImageUrl, paragraph, to }: WorkPortfolioProps) {
     return (
         <div className="max-w-xs w-full px-3 pt-10">
             <div
@@ -24,7 +25,7 @@ export function WorkPortfolio({ title, BgImageUrl, paragraph }: WorkPortfolioPro
                     <p className="font-normal text-base my-4">{paragraph}</p>
                 </div>
                 <div className="flex flex-row gap-2">
-                    <Link href={"/about"}>
+                    <Link href={to}>
                         <button className="font-extrabold text-white">Know more </button>
                     </Link>
                     <ArrowUpRight className="text-white" />

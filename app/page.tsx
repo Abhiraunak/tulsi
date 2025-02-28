@@ -76,27 +76,32 @@ export default function Home() {
                 paragraph="Wall paint enhances aesthetics, protects surfaces, and adds durability. 
                           Our expert architects ensure flawless finishes, transforming spaces with vibrant colors"
                 BgImageUrl="/Walllpaint.jpg"
+                to="/wallpaint"
               />
               <WorkPortfolio
                 title="Wall Panels"
                 paragraph="Wall panels enhance interiors with stylish, durable designs, providing insulation, noise reduction, 
                           and aesthetic appeal for modern architectural spaces."
                 BgImageUrl="/Wallpanels.jpg"
+                to="/wallpanel"
               />
               <WorkPortfolio
                 title="False Celling"
                 paragraph="Enhance aesthetics and functionality with false ceilings, offering improved lighting, insulation, and modern designs for residential and commercial spaces."
                 BgImageUrl="/Falsee.jpg"
+                to="/falsecelling"
               />
               <WorkPortfolio
                 title="Wallpaper"
                 paragraph="Elevate interiors with premium wallpapers, adding texture, color, and personality to walls for a stylish and elegant look"
                 BgImageUrl="/wallppaper.jpg"
+                to="/wallpaper"
               />
               <WorkPortfolio
                 title="Flooring"
                 paragraph="Upgrade spaces with high-quality flooring solutions, ensuring durability, style, and comfort for homes, offices, and commercial environments."
                 BgImageUrl="/Flooring.jpg"
+                to="/flooring"
               />
             </div>
           </div>

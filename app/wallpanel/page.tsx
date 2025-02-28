@@ -1,36 +1,23 @@
 "use client";
 import React from "react";
-import { ContainerScroll } from "@/components/ContainerScroll";
 import Image from "next/image";
-// import Appbar from "@/components/Appbar";
 import ProductDescription from "@/components/ProductDescription";
 import ProductBetween from "@/components/ProductBetween";
 import Faq from "@/components/Faq";
+import Header from "@/components/Header";
+import { Testonomial } from "@/components/Testonomial";
+import ProductAppbar from "@/components/ProductAppbar";
 
 export default function Wallpanels() {
     return (
         <>
-            <main>
-                <div className="flex flex-col overflow-hidden">
-                    <ContainerScroll
-                        titleComponent={<>
-                            <h1 className="text-4xl font-semibold text-black">
-                                Your Walls, Your Canvas <br />
-                                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                                    Let's Paint a Masterpiece!
-                                </span>
-                            </h1>
-                        </>}
-                    >
-                        <Image
-                            src={`/Panels1.png`}
-                            alt="hero"
-                            height={720}
-                            width={720}
-                            className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                            draggable={false} />
-                    </ContainerScroll>
-                </div>
+            <main className="w-full h-1/4 mb-10">
+            <ProductAppbar/>
+                <Header
+                    imageUrl={"/Wallpanels/Panel27.jpg"}
+                    headingText={"Transform walls, elevate spaces, timeless style."}
+                    bottomText={"Wall panels: Style, strength, stunning simplicity."}
+                />
             </main>
             <section className="container relative max-w-screen-xl mx-auto">
                 <h1 className="text-2xl font-semibold mb-6">Browse Space</h1>
@@ -49,7 +36,7 @@ export default function Wallpanels() {
                     to={"/"}
                 />
             </div>
-            <div className="container relative max-w-screen-xl mx-auto">
+            <div className="container relative max-w-screen-xl mx-auto mb-10">
                 <h1 className="text-2xl font-semibold mb-6">Browse Look</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 ">
                     <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
@@ -58,15 +45,20 @@ export default function Wallpanels() {
                     <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Wallpanel"} height="400px" />
                 </div>
             </div>
+            {/* Coustomer testinomial section start from here */}
+            <div className="container relative w-full mx-auto mb-10">
+            <h1 className="text-3xl font-bold text-zinc-800 mb-2">What our Coustomer says about us</h1>
+                <Testonomial />
+            </div>
 
-            {/*Frequently ask questions start from here */}
+            {/* Frequently Asked Questions Section */}
+            <div className="container max-w-screen-xl mx-auto py-10 border-t-2 border-b-2 border-zinc-500">
+                <h1 className="text-3xl text-center font-bold text-zinc-800 mb-8">Frequently Asked Questions</h1>
 
-            <div className="container relative max-w-screen-xl mx-auto mt-10">
-                <h1 className="text-xl font-semibold">Frequently asked questions</h1>
-                <div className="flex flex-col">
+                <div className="flex flex-col space-y-6">
                     <Faq
-                        ques={"Can panels be installed over existing plywood or tiles?"}
-                        ans={"Yes, they can be installed over any surface including tiles, plywood, and drywall"}
+                        ques="Can panels be installed over existing plywood or tiles?"
+                        ans="Yes, they can be installed over any surface including tiles, plywood, and drywall."
                     />
                     <Faq
                         ques="How do I check if my walls are suitable for wall panels?"
@@ -74,17 +66,31 @@ export default function Wallpanels() {
                             <>
                                 All walls are suitable for panel installation.
                                 <br />
-                                Any kind of imperfections will be handled by our professional.
+                                Any kind of imperfections will be handled by our professionals.
                             </>
                         }
                     />
+
                     <Faq
-                        ques={"What are PVC panels?"}
-                        ans={"PVC stands for polyvinyl chloride. It is a type of eco-friendly plastic material that is widely used today due to its affordability and ease of installation."}
+                        ques="What are PVC panels?"
+                        ans={
+                            <>
+                                PVC stands for polyvinyl chloride. It is a type of eco-friendly plastic
+                                <br />
+                                Any kind of imperfections will be handled by our professionals.
+                            </>
+                        }
                     />
+
                     <Faq
-                        ques={"What are charcoal panels?"}
-                        ans={"Charcoal wall panels are decorative panels made from charcoal and other materials, such as polystyrene or wood.They can be used for a variety of purposes"}
+                        ques="What are charcoal panels?"
+                        ans={
+                            <>
+                                Charcoal wall panels are decorative panels made from charcoal and other materials,
+                                <br />
+                                such as polystyrene or wood. They can be used for a variety of purposes.
+                            </>
+                        }
                     />
                 </div>
             </div>
