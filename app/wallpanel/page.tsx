@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import ProductDescription from "@/components/ProductDescription";
 import ProductBetween from "@/components/ProductBetween";
 import Faq from "@/components/Faq";
@@ -11,8 +10,10 @@ import ProductAppbar from "@/components/ProductAppbar";
 export default function Wallpanels() {
     return (
         <>
+            <nav className="sticky top-0 z-[1000] bg-white shadow-md">
+                <ProductAppbar heading="Wall panel" />
+            </nav>
             <main className="w-full h-1/4 mb-10">
-            <ProductAppbar/>
                 <Header
                     imageUrl={"/Wallpanels/Panel27.jpg"}
                     headingText={"Transform walls, elevate spaces, timeless style."}
@@ -47,7 +48,7 @@ export default function Wallpanels() {
             </div>
             {/* Coustomer testinomial section start from here */}
             <div className="container relative w-full mx-auto mb-10">
-            <h1 className="text-3xl font-bold text-zinc-800 mb-2">What our Coustomer says about us</h1>
+                <h1 className="text-3xl font-bold text-zinc-800 mb-2">What our Coustomer says about us</h1>
                 <Testonomial />
             </div>
 
