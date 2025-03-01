@@ -2,7 +2,6 @@
 import React from "react";
 import ProductDescription from "@/components/ProductDescription";
 import ProductBetween from "@/components/ProductBetween";
-import Faq from "@/components/Faq";
 import Header from "@/components/Header";
 import { Testonomial } from "@/components/Testonomial";
 import ProductAppbar from "@/components/ProductAppbar";
