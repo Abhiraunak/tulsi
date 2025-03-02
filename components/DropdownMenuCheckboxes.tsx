@@ -16,10 +16,10 @@ export function DropdownMenuCheckboxes() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline">Services</Button>
+                <Button variant="outline" className="border-green-800 hover:font-semibold">Services</Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>All Services</DropdownMenuLabel>
+            <DropdownMenuContent className="w-56 z-[100]">
+                <DropdownMenuLabel className="text-green-950">All Services</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuCheckboxItem
                     disabled

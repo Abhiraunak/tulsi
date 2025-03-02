@@ -10,7 +10,7 @@ import ProductAppbar from "@/components/ProductAppbar";
 export default function Wallpanels() {
     return (
         <>
-            <nav className="sticky top-0 z-[1000] bg-white shadow-md">
+            <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Wall panel" />
             </nav>
             <main className="w-full h-1/4 mb-10">

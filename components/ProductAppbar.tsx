@@ -10,8 +10,8 @@ interface ProductAppbarProps{
 
 export default function Page({heading}: ProductAppbarProps) {
     return (
-        <div className='max-w-screen-xl mx-auto py-2 flex items-center justify-between'>
-            <div className="nleft flex items-center">
+        <div className='w-full mx-auto py-2 px-4 flex items-center justify-between fixed top-0 left-1/2 transform -translate-x-1/2 bg-gray-100 shadow-md'>
+            <div className="flex items-center">
                 <Link href={"/"}>
                     <Image
                         src={"/tulsi-logo1.png"}
@@ -20,10 +20,10 @@ export default function Page({heading}: ProductAppbarProps) {
                         width={60}
                     />
                 </Link>
-                <Separator orientation="vertical" className="h-12 w-[2.5px] bg-black ml-3" />
-                <h3 className="ml-3 text-2xl font-semibold leading-none tracking-tight">{heading}</h3>
+                <Separator orientation="vertical" className="h-12 w-[1.5px] bg-green-800 ml-3" />
+                <h3 className="ml-3 text-xl md:text-2xl text-green-950 font-semibold tracking-tighter">{heading}</h3>
             </div>
-            <div className="mr-10">
+            <div>
                 <DropdownMenuCheckboxes />
             </div>
         </div>
