@@ -13,7 +13,7 @@ export default function Wallpanels() {
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Wall panel" />
             </nav>
-            <main className="w-full h-1/4 mb-10">
+            <main className="max-w-screen h-1/4 mb-10">
                 <Header
                     imageUrl={"/Wallpanels/Panel27.jpg"}
                     headingText={"Transform walls, elevate spaces, timeless style."}
@@ -21,7 +21,7 @@ export default function Wallpanels() {
                 />
             </main>
             <section className="container relative max-w-screen-xl mx-auto">
-                <h1 className="text-2xl font-semibold mb-6">Browse Space</h1>
+                <h1 className="text-2xl md:text-4xl font-semibold mb-6">Browse Space</h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
                     <ProductDescription imageUrl={"/Wallpanels/Panel12.jpg"} description={"Tv Unit"} />
@@ -38,7 +38,7 @@ export default function Wallpanels() {
                 />
             </div>
             <div className="container relative max-w-screen-xl mx-auto mb-10">
-                <h1 className="text-2xl font-semibold mb-6">Browse Look</h1>
+                <h1 className="text-2xl md:text-4xl font-semibold mb-6">Browse Look</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 ">
                     <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
                     <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />

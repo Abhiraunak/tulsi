@@ -10,13 +10,19 @@ interface headerProps {
 export default function Header({ imageUrl, headingText, bottomText }: headerProps) {
     return (
         <div
-            className="w-full h-[20rem] bg-cover bg-center relative flex items-center justify-center"
+            className="w-[120%] md:w-full min-h-[15rem] md:min-h-[25rem] lg:min-h-[30rem] bg-cover bg-center bg-no-repeat relative flex items-center justify-center p-4 md:p-8"
             style={{ backgroundImage: `url(${imageUrl})` }}
             aria-label="Product background"
         >
-            <div className="flex flex-col items-center">
-                <h1 className="text-2xl font-bold text-white mb-2">{headingText}</h1>
-                <h3 className="text-base font-normal text-gray-300 mb-4 leading-none tracking-tight">{bottomText}</h3>
+            <div className="flex flex-col items-center text-center">
+                {/* Responsive Heading */}
+                <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-white mb-2">
+                    {headingText}
+                </h1>
+                {/* Responsive Subheading */}
+                <h3 className="text-sm md:text-base lg:text-lg font-normal text-gray-300 mb-4 leading-none tracking-tight">
+                    {bottomText}
+                </h3>
             </div>
         </div>
     )
