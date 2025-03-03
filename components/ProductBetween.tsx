@@ -1,5 +1,5 @@
+"use client"
 import { Button } from "./ui/button";
-
 interface ProductBetweenProps {
     imageUrl: string;
     headingText: string;
@@ -17,7 +17,7 @@ export default function ProductBetween({ imageUrl, headingText, bottomText, butt
         >
             <div className="flex flex-col items-center">
                 <h1 className="text-2xl font-bold text-white leading-3 mb-5">{headingText}</h1>
-                <h3 className="text-base text-center font-normal text-gray-300  mb-4 leading-1 tracking-tight">{bottomText}</h3>
+                <h3 className="text-base text-center font-normal text-gray-300  mb-4 leading-1 tracking-tighter">{bottomText}</h3>
                 <Button
                     onClick={() => (window.location.href = to)}
                     className="bg-white text-black rounded-lg hover:bg-white hover:font-semibold"
