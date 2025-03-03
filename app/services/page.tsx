@@ -12,9 +12,8 @@ export default function Services() {
     return (
         <>
         <Appbar />
-            <div className="grid grid-cols-1 gap-y-5 lg:gap-x-5 lg:grid-cols-5 w-screen py-5 lg:py-8 ">
-                <div className="col-span-3 lg: order-1 px-10">
-                    <Card className="border-gray-600 shadow-lg">
+                <div className="max-w-screen-xl mx-auto flex items-center">
+                    <Card className="shadow-lg max-w-screen-lg">
                         <CardContent>
                             <div className="py-4">
                                 <h1 className="text-3xl font-extrabold tracking-tighter">
@@ -67,10 +66,6 @@ export default function Services() {
                         </CardContent>
                     </Card>
                 </div>
-                <div className="col-span-2 order-1 flex flex-col items-center h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
-                    <WorkService />
-                </div>
-            </div>
         </>
     );
 }

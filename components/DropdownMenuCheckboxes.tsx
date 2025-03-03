@@ -10,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import Link from "next/link";
 
 
 export function DropdownMenuCheckboxes() {
@@ -18,25 +19,33 @@ export function DropdownMenuCheckboxes() {
             <DropdownMenuTrigger asChild>
                 <Button variant="outline" className="border-green-800 hover:font-semibold">Services</Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 z-[100]">
-                <DropdownMenuLabel className="text-green-950">All Services</DropdownMenuLabel>
+            <DropdownMenuContent className="w-56 mr-2 z-[100] ">
+                <DropdownMenuLabel className="text-green-950 pt-5">All Services</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuCheckboxItem
-                    disabled
-                >
-                    Wallpanel
+                <DropdownMenuCheckboxItem className="hover:font-semibold">
+                    <Link href={"/wallpanel"}>
+                        Wallpanel
+                    </Link>
                 </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                    Wallpaper
+                <DropdownMenuCheckboxItem className="hover:font-semibold">
+                    <Link href={"/wallpaper"}>
+                        Wallpaper
+                    </Link>
                 </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                    Wallpaint
+                <DropdownMenuCheckboxItem className="hover:font-semibold">
+                    <Link href={"/wallpaint"}>
+                        Wallpaint
+                    </Link>
                 </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                    Flooring
+                <DropdownMenuCheckboxItem className="hover:font-semibold">
+                    <Link href={"/falsecelling"}>
+                        False Celling
+                    </Link>
                 </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                    False-celling
+                <DropdownMenuCheckboxItem className="hover:font-semibold">
+                    <Link href={"/flooring"}>
+                        Flooring
+                    </Link>
                 </DropdownMenuCheckboxItem>
             </DropdownMenuContent>
         </DropdownMenu>
