@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import ProductDescription from "@/components/ProductDescription";
 import ProductBetween from "@/components/ProductBetween";
-import Faq from "@/components/Faq";
 import Header from "@/components/Header";
 import { Testonomial } from "@/components/Testonomial";
 import ProductAppbar from "@/components/ProductAppbar";
@@ -45,7 +44,7 @@ export default function Wallpanels() {
                     headingText={"Style it your way"}
                     bottomText={"Shape your spaces with most soothing trends & make a statement like never before"}
                     buttonText={"Browse all space"}
-                    to={"/"}
+                    to={"/wallpanel/gallery"}
                 />
             </div>
             <div className="container relative max-w-screen-xl mx-auto mb-10">

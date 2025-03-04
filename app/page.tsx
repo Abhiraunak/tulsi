@@ -1,8 +1,9 @@
-import Link from "next/link";
 import Head from "next/head";
 import { WorkPortfolio } from "@/components/WorkPortfolio";
-import Appbar from "@/components/Appbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+import Appbar from "@/components/Appbar";
+// import WhatsappButton from "@/components/WhatsAppIntegration";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <meta property="og:image" content="https://www.yourwebsite.com/preview.jpg" /> // replace with the website preview image aka logo
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       {/* Main Content */}
       <main className="relative w-full h-[35rem]  bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_2px,transparent_1px)] bg-[size:6rem_4rem]">
         <Appbar />
@@ -108,8 +110,11 @@ export default function Home() {
         </div>
       </div>
       <div className="relative w-full">
-          <Footer />
-        </div>
+        <Footer />
+      </div>
+      {/* <div className="fixed bottom-20 right-5 z-[1100]">
+        <WhatsappButton />
+      </div> */}
     </>
   );
 }
