@@ -1,60 +1,59 @@
 
-import Image from "next/image"
-
 export default function Footer() {
     return (
-        <div className="mt-5 flex flex-col lg:flex-row [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
-            <div className="px-10 lg:basis-1/2">
-                <Image
-                    src="/tulsi-logo1.png"
-                    width={300}
-                    height={100}
-                    alt="tulsi-logo"
-                />
-            </div>
-            <div className="lg:basis-1/2 flex flex-col lg:flex-row gap-4">
-                <div className="lg:basis-1/3">
-                    <h4 className=" mb-3 text-xl capitalize font-semibold">socials</h4>
-                    <div className="text-gray-600 flex flex-col gap-2">
-                        <div className="flex items-center gap-2">
-                            <span>{facebook()}</span>
-                            <h3>Facebook</h3>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span>{instagram()}</span>
-                            <h3>Instagram</h3>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span>{twitter()}</span>
-                            <h3>Twitter</h3>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span>{whatsapp()}</span>
-                            <h3>WhatsApp</h3>
-                        </div>
-                    </div>
+        <footer className="bg-white">
+            <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-24">
+                <div className="text-center">
+                    <h2 className="text-3xl font-extrabold text-gray-900 sm:text-5xl">Book a
+                        <strong className="font-extrabold text-green-900"> Service </strong>
+                        with us
+                    </h2>
+
+                    <p className="mx-auto mt-4 max-w-sm text-gray-600">
+                        At Tulsi, we bring your dream space to life with expert wallpanel, flooring, false ceilings, painting, 
+                        and wallpaper, ensuring top-quality craftsmanship and a seamless experience from start to finish.
+                    </p>
+
+                    <a
+                        href="/services"
+                        className="mt-8 inline-block rounded-full border border-green-600 px-12 py-3 text-sm font-medium hover:font-semibold text-green-600 hover:bg-green-800 hover:text-white focus:ring-3 focus:outline-hidden"
+                    >
+                        Book a service
+                    </a>
                 </div>
 
-                <div className="lg:basis-1/3">
-                    <h4 className=" mb-3 text-xl capitalize font-semibold">Services</h4>
-                    <div className="tracking-tight select-none">
-                        <h3>Wallpaper</h3>
-                        <h3>Wallpaint</h3>
-                        <h3>Wallpanels</h3>
-                        <h3>False-celling</h3>
-                        <h3>Flooring</h3>
-                    </div>
-                </div>
-                <div className="lg:basis-1/3 flex flex-col items-end">
-                    <p className="text-right mr-2 tracking-tight leading-5 select-none">
-                        Tulsi is a leading provider of high-quality wallpanels, wallpapers, false ceilings, and flooring solutions. Our mission is to bring elegance and innovation to every space.
-                    </p>
-                    <button className="px-3 py-2 m-5 bg-black rounded-lg font-semibold text-white text-center">
-                        Services
-                    </button>
+                <div
+                    className="mt-[1rem] border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24"
+                >
+                    <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+                        <li>
+                            <a href="#" className="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a>
+                        </li>
+
+                        <li>
+                            <a href="#" className="text-gray-500 transition hover:opacity-75"> Privacy Policy </a>
+                        </li>
+
+                        <li>
+                            <a href="#" className="text-gray-500 transition hover:opacity-75"> Cookies </a>
+                        </li>
+                    </ul>
+
+                    <ul className="flex justify-center gap-6 sm:mt-0 lg:justify-end">
+                        <li>
+                            {instagram()}
+                        </li>
+                        {facebook()}
+                        <li>
+                            {whatsapp()}
+                        </li>
+                        <li>
+                            {twitter()}
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
