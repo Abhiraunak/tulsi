@@ -6,7 +6,7 @@ export default function Page() {
     <>
       <ProductAppbar heading={"Wall panel"} />
       <div className="flex flex-col items-center justify-center min-h-screen text-center">
-        <h1 className="text-6xl text-green-700 font-extrabold">A new design update is in the works</h1>
+        <h1 className="text-6xl text-green-700 font-extrabold">Hi from gallery</h1>
         <h3 className="text-xl">Stay tuned we will update soon.</h3>
         <Image
           src={"/tulsi-logo1.png"}

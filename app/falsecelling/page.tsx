@@ -44,7 +44,7 @@ export default function FalseCelling() {
                     headingText={"Style it your way"}
                     bottomText={"Shape your spaces with most soothing trends & make a statement like never before"}
                     buttonText={"Browse all space"}
-                    to={"/"}
+                    to={"/falsecelling/gallery"}
                 />
             </div>
             <div className="container relative max-w-screen-xl mx-auto mb-10">
