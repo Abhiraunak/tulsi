@@ -10,7 +10,7 @@ interface ProductAppbarProps{
 
 export default function Page({heading}: ProductAppbarProps) {
     return (
-        <div className='w-full mx-auto py-2 px-4 flex items-center justify-between fixed top-0 left-1/2 transform -translate-x-1/2 bg-gray-100 shadow-md'>
+        <div className='w-full mx-auto py-2 px-4 flex items-center justify-between fixed top-0 left-1/2 transform -translate-x-1/2 bg-gray-100 shadow-md z-[1001]'>
             <div className="flex items-center">
                 <Link href={"/"}>
                     <Image

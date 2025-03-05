@@ -16,7 +16,6 @@ export default function Page() {
           className="mt-4"
         />
       </div>
-
     </>
   )
 }
