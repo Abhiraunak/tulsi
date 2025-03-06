@@ -29,7 +29,7 @@ export default function Wallpanels() {
                 />
             </main>
             <section className="container relative max-w-screen-xl mx-auto">
-                <h1 className="text-2xl md:text-4xl font-semibold mb-6 mx-2">Browse Space</h1>
+                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Space</h1>
                 <div className="flex items-center justify-center mx-8 md:mx-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
@@ -48,7 +48,7 @@ export default function Wallpanels() {
                 />
             </div>
             <div className="container relative max-w-screen-xl mx-auto mb-10">
-                <h1 className="text-2xl md:text-4xl font-semibold mb-6 mx-2">Browse Look</h1>
+                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Look</h1>
                 <div className="mx-8 md:mx-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 ">
                         <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
