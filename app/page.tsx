@@ -2,6 +2,7 @@ import Head from "next/head";
 import { WorkPortfolio } from "@/components/WorkPortfolio";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import WhatsappButton from "@/components/WhatsAppIntegration";
 
 
 export default function Home() {
@@ -45,7 +46,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-2xl tracking-tight sm:text-xl sm:tracking-tighter opacity-50">What we do</h3>
-            <h2 className="px-4 text-4xl sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">Our Expertise</h2>
+            <h2 className="px-4 text-4xl text-green-950 sm:tracking-tighter lg:tracking-tight sm:text-5xl lg:text-6xl xl:text-8xl">Our Expertise</h2>
           </div>
           <div className="max-w-screen-xl mx-auto flex flex-col mt-[85px]">
             <div className="grid grid-cols-1 gap-10 justify-center items-center">
@@ -89,9 +90,9 @@ export default function Home() {
       <div className="relative w-full">
         <Footer />
       </div>
-      {/* <div className="fixed bottom-20 right-5 z-[1100]">
+      <div className="fixed bottom-20 right-5 z-[1100]">
         <WhatsappButton />
-      </div> */}
+      </div>
     </>
   );
 }

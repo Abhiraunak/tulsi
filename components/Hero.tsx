@@ -28,15 +28,15 @@ export default function Hero() {
 
                     <div className="mt-8 flex flex-wrap gap-4 text-center">
                         <a
-                            href="#"
-                            className="block w-full rounded-sm bg-green-700 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
+                            href="/wallpanel"
+                            className="block w-full rounded-md bg-green-700 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-green-900 focus:ring-3 focus:outline-hidden sm:w-auto"
                         >
                             Get Started
                         </a>
 
                         <a
                             href="#"
-                            className="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-green-600 shadow-sm hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
+                            className="block w-full rounded-md bg-white px-12 py-3 text-sm font-medium hover:font-semibold text-green-600 shadow-sm hover:text-green-900 focus:ring-3 focus:outline-hidden sm:w-auto"
                         >
                             Learn More
                         </a>

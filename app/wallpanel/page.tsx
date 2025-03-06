@@ -60,11 +60,11 @@ export default function Wallpanels() {
             </div>
 
             {/* Customer Testimonial Section */}
-            <div className="container relative w-full mx-auto mb-10">
-                <h2 className="text-center  text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <div className="container relative w-full mx-10 md:mx-auto mb-10">
+                <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                     Read trusted reviews from our customers
                 </h2>
-                {isClient && <Testonomial />} {/* Ensuring hydration consistency */}
+                {isClient && <Testonomial />} 
             </div>
 
             <div className="fixed bottom-0 left-0 w-full bg-gray-100 shadow-md text-white text-center p-4 z-[1000]">

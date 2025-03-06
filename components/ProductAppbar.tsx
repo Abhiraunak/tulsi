@@ -20,7 +20,7 @@ export default function Page({heading}: ProductAppbarProps) {
                         width={60}
                     />
                 </Link>
-                <Separator orientation="vertical" className="h-12 w-[1.5px] bg-green-800 ml-3" />
+                <Separator orientation="vertical" className="h-12 w-[1.5px] bg-green-900 ml-3" />
                 <h3 className="ml-3 text-xl md:text-2xl text-green-950 font-semibold tracking-tighter">{heading}</h3>
             </div>
             <div>

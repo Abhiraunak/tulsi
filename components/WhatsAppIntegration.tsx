@@ -1,34 +1,35 @@
-// components/WhatsappButton.tsx
+"use client"
 import React from "react";
 import { motion } from "framer-motion";
 
-const WhatsappButton = () => {
+export default function WhatsappButton() {
     const phoneNumber = "+91 97176 54551"; // Replace with your phone number
     const message = "Hello! I would like to know more about Tulsi's services.";
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
     return (
-        <motion.div
-            className="fixed bottom-8 right-8 z-[1000]"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-        >
-            <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
-                aria-label="Chat with us on WhatsApp"
+        <>
+            <motion.div
+                className="fixed bottom-8 right-8 z-[1000]"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
             >
-                {whatsapp()}
-            </a>
-        </motion.div>
+                <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+                    aria-label="Chat with us on WhatsApp"
+                >
+                    {whatsapp()}
+                </a>
+            </motion.div>
+        </>
     );
 };
 
-export default WhatsappButton;
 
 const whatsapp = () => {
     return (
