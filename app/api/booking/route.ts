@@ -1,15 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client"
 import { z } from "zod";
 
 const db = new PrismaClient();
 
+
 // Zod schema for validation
 const bookingDetails = z.object({
-    name: z.string().min(5, "Please enter your full name"),
+    name       : z.string().min(5, "Please enter your full name"),
     phoneNumber: z.string().min(10, "Please enter a valid phone number"),
-    service: z.string().min(1, "Please select a service"),
-    address: z.string().min(5, "Please enter a valid address")
+    service    : z.string().min(1, "Please select a service"),
+    address    : z.string().min(5, "Please enter a valid address")
 });
 
 export async function POST(req: NextRequest) {
@@ -21,7 +22,7 @@ export async function POST(req: NextRequest) {
         const booking = await db.service.create({
             data: {
                 name: data.name,
-                phnumber: data.phoneNumber,
+                phoneNumber : data.phoneNumber,
                 services: data.service,
                 address: data.address
             }
@@ -29,7 +30,6 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json({
             message: "Booking successful",
-            booking
         }, { status: 201 });
 
     } catch (e) {

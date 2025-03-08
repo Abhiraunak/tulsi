@@ -20,10 +20,10 @@ model User {
 }
 
 model Service {
-  id        String   @id
-  name      String
-  phnumber  Int
-  services  String   @unique
-  address   String
-  timeStamp DateTime
+  id          String   @id @default(uuid())
+  name        String
+  phoneNumber String
+  services    String   @unique
+  address     String
+  timeStamp   DateTime @default(now())
 }
