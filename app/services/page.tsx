@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react";
 import ProductAppbar from "@/components/ProductAppbar";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Button } from "@/components/ui/button";
@@ -7,41 +8,93 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import WhatsappButton from "@/components/WhatsAppIntegration";
-import { useState } from "react";
+import { z } from "zod";
+import { Bounce, toast } from "react-toastify";
+
+const bookingSchema = z.object({
+    name: z.string().min(3, "Please enter your full name"),
+    phoneNumber: z.string().min(10, "Please enter a valid number"),
+    service: z.string().min(1, "Please choose a service"),
+    address: z.string().min(5, "Please enter your full address")
+});
 
 export default function Services() {
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         phoneNumber: "",
         service: "",
-        adress: ""
-    })
+        address: ""
+    });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
     };
 
     const handleServiceChange = (value: string) => {
-        setFormData({ ...formData, service: value });
-    }
-   
+        setFormData(prevState => ({
+            ...prevState,
+            service: value
+        }));
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
 
-        const res = await fetch('/api/booking', {
-            method: "POST",
-            body: JSON.stringify({
-                formData
-            })
-        })
-
-        if(res.ok){
-            alert("Booking sucessfull !!")
-        } else {
-            alert("Booking failed !")
+        // Perform input validation before sending to backend
+        const validation = bookingSchema.safeParse(formData);
+        if (!validation.success) {
+            toast.error(validation.error.errors[0].message);
+            setLoading(false);
+            return;
         }
-    }
 
+        try {
+            const res = await fetch('/api/booking', {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.message || "Booking failed!");
+
+            toast.success("Booking successful", {
+                position: "bottom-left",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+            });
+
+            // Reset form 
+            setFormData({ name: "", phoneNumber: "", service: "", address: "" });
+            
+        } catch (error: any) {
+            toast.error(error.message || "Something went wrong!", {
+                position: "bottom-left",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+            });
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <>
@@ -59,9 +112,10 @@ export default function Services() {
                                 </div>
                                 <form onSubmit={handleSubmit} className="space-y-3">
                                     <div>
-                                        <Label htmlFor="Name" className="font-semibold tracking-tight text-lg">Name</Label>
+                                        <Label htmlFor="name" className="font-semibold tracking-tight text-lg">Name</Label>
                                         <Input
                                             type="text"
+                                            name="name"
                                             placeholder="Enter your Name"
                                             value={formData.name}
                                             onChange={handleChange}
@@ -69,9 +123,10 @@ export default function Services() {
                                         />
                                     </div>
                                     <div>
-                                        <Label htmlFor="phone number" className="font-semibold tracking-tight text-lg">Phone Number</Label>
+                                        <Label htmlFor="phoneNumber" className="font-semibold tracking-tight text-lg">Phone Number</Label>
                                         <Input
                                             type="text"
+                                            name="phoneNumber"
                                             placeholder="Phone Number"
                                             value={formData.phoneNumber}
                                             onChange={handleChange}
@@ -80,7 +135,7 @@ export default function Services() {
                                     </div>
                                     <div className="container relative">
                                         <Label htmlFor="services" className="font-semibold tracking-tight text-lg">Services</Label>
-                                        <Select onValueChange={handleServiceChange}>
+                                        <Select name="service" value={formData.service} onValueChange={handleServiceChange}>
                                             <SelectTrigger className="w-full">
                                                 <SelectValue placeholder="Choose a Service" />
                                             </SelectTrigger>
@@ -97,15 +152,16 @@ export default function Services() {
                                         <Label htmlFor="address" className="font-semibold tracking-tight text-lg">Address</Label>
                                         <Input
                                             type="text"
+                                            name="address"
                                             placeholder="Address"
-                                            value={formData.adress}
+                                            value={formData.address}
                                             onChange={handleChange}
                                             required
                                         />
                                     </div>
                                     <div className="pt-5">
-                                        <Button type="submit" className="w-full">
-                                            Book your service
+                                        <Button type="submit" className="w-full rounded-sm bg-green-900 hover:bg-green-950 hover:font-semibold" disabled={loading}>
+                                            {loading ? "Booking ...." : "Book your service"}
                                         </Button>
                                     </div>
                                 </form>
