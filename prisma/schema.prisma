@@ -19,7 +19,7 @@ model User {
   name  String
 }
 
-model Service {
+model bookingService {
   id          String   @id @default(uuid())
   name        String
   phoneNumber String

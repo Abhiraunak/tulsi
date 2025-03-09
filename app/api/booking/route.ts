@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
         const data = bookingDetails.parse(await req.json());
 
         // Save booking to the database
-        const booking = await db.service.create({
+        const booking = await db.bookingService.create({
             data: {
                 name: data.name,
                 phoneNumber : data.phoneNumber,
