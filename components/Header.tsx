@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { Card } from "./ui/card";
-
 interface headerProps {
     imageUrl: string;
     headingText: string;
@@ -10,7 +7,7 @@ interface headerProps {
 export default function Header({ imageUrl, headingText, bottomText }: headerProps) {
     return (
         <div
-            className="w-[120%] md:w-full min-h-[15rem] md:min-h-[25rem] lg:min-h-[25rem] bg-cover bg-center bg-no-repeat relative flex items-center justify-center p-4 md:p-8"
+            className="w-[120%] md:w-full min-h-[15rem] md:min-h-[25rem] lg:min-h-[25rem] bg-cover bg-center bg-no-repeat inset-0 flex items-center justify-center p-4 md:p-8"
             style={{ backgroundImage: `url(${imageUrl})` }}
             aria-label="Product background"
         >

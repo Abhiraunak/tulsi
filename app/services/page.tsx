@@ -62,10 +62,22 @@ export default function Services() {
             });
 
             const data = await res.json();
-            if (!res.ok) throw new Error(data.message || "Booking failed!");
+            if (!res.ok) {
+                toast.error(data.message || "Something went wrong!", {
+                    position: "bottom-left",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    transition: Bounce,
+                });
+            }
 
             toast.success("Booking successful", {
-                position: "bottom-left",
+                position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: false,
@@ -78,7 +90,7 @@ export default function Services() {
 
             // Reset form 
             setFormData({ name: "", phoneNumber: "", service: "", address: "" });
-            
+
         } catch (error: any) {
             toast.error(error.message || "Something went wrong!", {
                 position: "bottom-left",
@@ -101,7 +113,7 @@ export default function Services() {
             <ProductAppbar heading={"Book a Service"} />
             <WhatsappButton />
             <div className="bg-slate-800 h-[105vh] md:h-screen md:w-full w-[105%]">
-                <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] px-2 mx-3 md:mx-0 md:p-6">
+                <div className="absolute  top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] px-2 mx-3 md:mx-0 md:p-6">
                     <BackgroundGradient>
                         <Card className="w-[25rem] rounded-2xl">
                             <CardContent>

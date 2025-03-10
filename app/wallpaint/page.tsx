@@ -5,6 +5,8 @@ import ProductBetween from "@/components/ProductBetween";
 import Header from "@/components/Header";
 import { Testonomial } from "@/components/Testonomial";
 import ProductAppbar from "@/components/ProductAppbar";
+import BookingButton from "@/components/BookingButoon";
+import WhatsappButton from "@/components/WhatsAppIntegration";
 
 export default function Wallpaint() {
     return (
@@ -13,7 +15,7 @@ export default function Wallpaint() {
                 <ProductAppbar heading="Wallpaint" />
             </nav>
             <main className="w-full h-1/4 mb-10">
-                <Header 
+                <Header
                     imageUrl={"/Wallpaint/wallpaint2.jpg"}
                     headingText={"Give Your Walls the Wow Factor"}
                     bottomText={"Brush Up Your Walls, Brighten Up Your Life!"}
@@ -49,6 +51,15 @@ export default function Wallpaint() {
             <div className="container relative w-full mx-auto mb-10">
                 <h1 className="text-3xl font-bold text-zinc-800 mb-2">What our Coustomer says about us</h1>
                 <Testonomial />
+            </div>
+
+            <div className="fixed bottom-0 left-0 w-full bg-gray-100 shadow-md text-white text-center p-4 z-[1000]">
+                <BookingButton />
+            </div>
+
+            {/* WhatsApp Button Above Booking Button */}
+            <div className="fixed bottom-20 right-5 z-[1100]">
+                <WhatsappButton />
             </div>
         </>
     )

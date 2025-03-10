@@ -24,7 +24,7 @@ export default function Page() {
             </div>
 
              {/* Living room display start from here */}
-             <div className="container relative max-w-screen-xl mx-auto pt-5 pb-20">
+             <div className="container relative max-w-screen-xl mx-auto pt-5">
                 <h1 className="text-3xl text-green-950 font-medium mx-3 md:mx-0">Living Room</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <ProductDescription imageUrl={"/Falsecelling/livingroom/design1.jpg"} description={"Living Room"} />
@@ -33,6 +33,18 @@ export default function Page() {
                     <ProductDescription imageUrl={"/Falsecelling/livingroom/design4.jpg"} description={"Living Room"} />
                     <ProductDescription imageUrl={"/Falsecelling/livingroom/design5.jpg"} description={"Living Room"} />
                     <ProductDescription imageUrl={"/Falsecelling/livingroom/design6.jpg"} description={"Living Room"} />
+                </div>
+            </div>
+
+            <div className="container relative max-w-screen-xl mx-auto pt-5 pb-20">
+                <h1 className="text-3xl text-green-950 font-medium mx-3 md:mx-0">Celling</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <ProductDescription imageUrl={"/Falsecelling/roof/roof1.jpg"} description={"Celling"} />
+                    <ProductDescription imageUrl={"/Falsecelling/roof/roof2.jpg"} description={"Celling"} />
+                    <ProductDescription imageUrl={"/Falsecelling/roof/roof3.jpg"} description={"Celling"} />
+                    <ProductDescription imageUrl={"/Falsecelling/roof/roof9.jpg"} description={"Celling"} />
+                    <ProductDescription imageUrl={"/Falsecelling/roof/roof8.jpg"} description={"Celling"} />
+                    <ProductDescription imageUrl={"/Falsecelling/roof/roof6.jpg"} description={"Celling"} />
                 </div>
             </div>
 

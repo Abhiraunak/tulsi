@@ -38,7 +38,7 @@ export default function Wallpanels() {
                     </div>
                 </div>
             </section>
-            <div className="container relative max-w-screen-2xl mx-auto pt-5 md:pt-20 pb-10">
+            <div className="container relative max-w-screen-2xl mx-auto pt-5 md:pt-20 pb-10 inset-0">
                 <ProductBetween
                     imageUrl={"/Wallpanels/Panel30.png"}
                     headingText={"Style it your way"}

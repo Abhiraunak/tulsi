@@ -33,8 +33,8 @@ export default function Wallpanels() {
                 <div className="flex items-center justify-center mx-8 md:mx-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <ProductDescription imageUrl={"/Falsecelling/bedroom/design5.jpg"} description={"Bed Rooms"} />
-                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design2.jpg"} description={"Living Room"} />
-                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Bedroom"} />
+                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living Room"} />
+                        <ProductDescription imageUrl={"/Falsecelling/roof/roof1.jpg"} description={"Celling"} />
                     </div>
                 </div>
             </section>
@@ -51,10 +51,10 @@ export default function Wallpanels() {
                 <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Look</h1>
                 <div className="mx-8 md:mx-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 ">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
-                        <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />
-                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Wallpanel"} height="400px" />
-                        <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/roof/roof1.jpg"} description={"Luxury Look"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/bedroom/design2.jpg"} description={"Bedroom"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living room"} height="400px" />
+                        <ProductDescription imageUrl={"Falsecelling/livingroom/design7.jpg"} description={"False-celling"} height="400px" />
                     </div>
                 </div>
             </div>
