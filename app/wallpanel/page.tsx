@@ -13,7 +13,7 @@ export default function Wallpanels() {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        setIsClient(true); // Ensures client-only rendering for dynamic content
+        setIsClient(true); 
     }, []);
 
     return (
