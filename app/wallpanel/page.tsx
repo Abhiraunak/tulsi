@@ -61,7 +61,7 @@ export default function Wallpanels() {
 
             {/* Customer Testimonial Section */}
             <div className="container relative w-full mx-10 md:mx-auto mb-10">
-                <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight text-green-950 sm:text-5xl">
                     Read trusted reviews from our customers
                 </h2>
                 {isClient && <Testonomial />} 
