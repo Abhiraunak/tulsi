@@ -14,7 +14,7 @@ export function Testonomial() {
         "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
       name: "Michael Rodriguez",
       designation: "CTO at InnovateSphere",
-      src: "/Person/Man2.jpg",
+      src: "/Person/Man4.jpg",
     },
     {
       quote:

@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
         });
 
         return NextResponse.json({
+            booking,
             message: "Booking successful",
         }, { status: 201 });
 
