@@ -39,7 +39,6 @@ export async function POST(req: NextRequest) {
                 message: e.errors[0].message  // Return the first validation error
             }, { status: 400 });
         }
-
         return NextResponse.json({
             message: "Error while booking a service"
         }, { status: 500 });

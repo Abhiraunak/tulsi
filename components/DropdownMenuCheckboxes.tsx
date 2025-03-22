@@ -23,7 +23,7 @@ export function DropdownMenuCheckboxes() {
                 <DropdownMenuLabel className="text-green-950 pt-5">All Services</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuCheckboxItem className="hover:font-semibold">
-                    <Link href={"/wallpanel"}>
+                    <Link href={"/wallpanel"} prefetch>
                         Wallpanel
                     </Link>
                 </DropdownMenuCheckboxItem>

@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ProductAppbar from '@/components/ProductAppbar';
@@ -19,16 +18,10 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-7xl md:text-9xl font-extrabold drop-shadow-lg animate-fadeIn">
+                    <h1 className="text-6xl md:text-9xl font-extrabold drop-shadow-lg animate-fadeIn">
                         Transform Your Space
                     </h1>
                     <p className="mt-6 text-2xl md:text-3xl opacity-90">Professional painters to bring your vision to life.</p>
-                    <motion.button
-                        className="mt-8 bg-lime-500 text-gray-900 px-10 py-5 rounded-full font-semibold shadow-xl hover:bg-lime-600 hover:scale-110 transition-transform duration-300"
-                        whileHover={{ scale: 1.1 }}
-                    >
-                        Get a Free Quote
-                    </motion.button>
                 </motion.div>
             </section>
 

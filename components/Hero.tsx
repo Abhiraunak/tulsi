@@ -35,10 +35,10 @@ export default function Hero() {
                         </a>
 
                         <a
-                            href="#"
+                            href="/services"
                             className="block w-full rounded-md bg-white px-12 py-3 text-sm font-medium hover:font-semibold text-green-600 shadow-sm hover:text-green-900 focus:ring-3 focus:outline-hidden sm:w-auto"
                         >
-                            Learn More
+                            Book a service
                         </a>
                     </div>
                 </div>
