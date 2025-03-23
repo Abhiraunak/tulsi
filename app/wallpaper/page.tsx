@@ -7,6 +7,7 @@ import { Testonomial } from "@/components/Testonomial";
 import ProductAppbar from "@/components/ProductAppbar";
 import BookingButton from "@/components/BookingButoon";
 import WhatsappButton from "@/components/WhatsAppIntegration";
+import { motion } from "framer-motion";
 
 
 export default function Wallpanels() {
@@ -21,20 +22,27 @@ export default function Wallpanels() {
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Wallpaper" />
             </nav>
-            <main className="max-w-screen h-1/4 mb-10">
-                <Header
-                    imageUrl={"/Wallpanels/Panel30.png"}
-                    headingText={"Transform walls, elevate spaces, timeless style."}
-                    bottomText={"Wall panels: Style, strength, stunning simplicity."}
-                />
-            </main>
+            <section className="relative text-center py-32 bg-gradient-to-r from-green-700 to-teal-800 text-white overflow-hidden flex flex-col items-center justify-center">
+                <div className="absolute inset-0 bg-black opacity-20"></div>
+                <motion.div
+                    className="relative z-10 max-w-5xl text-center"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                >
+                    <h1 className="text-6xl md:text-7xl font-extrabold drop-shadow-lg animate-fadeIn">
+                      Transform Your Walls, Elevate Your Space!
+                    </h1>
+                    <p className="mt-6 text-2xl md:text-3xl opacity-90">Wrap Your Walls in Elegance!</p>
+                </motion.div>
+            </section>
             <section className="container relative max-w-screen-xl mx-auto">
-                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Space</h1>
+                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2 mt-10">Browse Space</h1>
                 <div className="flex items-center justify-center mx-8 md:mx-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
-                        <ProductDescription imageUrl={"/Wallpanels/Panel12.jpg"} description={"Tv Unit"} />
-                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Bedroom"} />
+                        <ProductDescription imageUrl={"/Wallpaper/wallpaper3.png"} description={"Living Rooms"} />
+                        <ProductDescription imageUrl={"/Wallpaper/wallpaper1.png"} description={"Hallways"} />
+                        <ProductDescription imageUrl={"/Wallpaper/wallpaper5.jpg"} description={"Bedroom"} />
                     </div>
                 </div>
             </section>
