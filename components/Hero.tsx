@@ -23,7 +23,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="mt-4 max-w-lg tracking-normal text-gray-300 sm:text-xl/relaxed">
-                        Expert Architecture & Renovation Solutions Tailored for You
+                        Premium <strong>Wallpaper, False Ceilings, Flooring & Wall Panels, Wall Paint</strong> to Elevate Your Home’s Aesthetics.
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-4 text-center">

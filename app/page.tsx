@@ -3,6 +3,7 @@ import { WorkPortfolio } from "@/components/WorkPortfolio";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import WhatsappButton from "@/components/WhatsAppIntegration";
+import Whychoose from "@/components/Whychoose";
 
 
 export default function Home() {
@@ -86,6 +87,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+      </div>
+      <div>
+        <Whychoose />
       </div>
       <div className="relative w-full">
         <Footer />

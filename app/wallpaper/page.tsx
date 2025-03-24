@@ -22,7 +22,7 @@ export default function Wallpanels() {
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Wallpaper" />
             </nav>
-            <section className="relative text-center py-32 bg-gradient-to-r from-green-700 to-teal-800 text-white overflow-hidden flex flex-col items-center justify-center">
+            <section className="relative w-[120%] text-center py-32 bg-gradient-to-r from-green-700 to-teal-800 text-white overflow-hidden flex flex-col items-center justify-center">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <motion.div
                     className="relative z-10 max-w-5xl text-center"
