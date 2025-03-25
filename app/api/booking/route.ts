@@ -4,7 +4,6 @@ import { z } from "zod";
 
 const db = new PrismaClient();
 
-
 // Zod schema for validation
 const bookingDetails = z.object({
     name       : z.string().min(5, "Please enter your full name"),

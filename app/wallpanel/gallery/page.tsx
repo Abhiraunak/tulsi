@@ -7,19 +7,19 @@ export default function Page() {
     return (
         <div>
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
-                <ProductAppbar heading="Wallpaper" />
+                <ProductAppbar heading="Wallpanel" />
             </nav>
 
             {/* Bedroom display start from here */}
             <div className="container relative max-w-screen-xl mx-auto pt-20">
                 <h1 className="text-3xl text-green-950 font-semibold mx-3 md:mx-0">Bedroom</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <ProductDescription imageUrl={"/Wallpaper/Bedroom/room1.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Bedroom/room2.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Bedroom/room3.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Bedroom/room4.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Bedroom/room5.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Bedroom/room6.jpg"} description={"Bedroom"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room1.jpg"} description={"Bedroom"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room2.jpg"} description={"Bedroom"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room3.jpg"} description={"Bedroom"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room4.jpg"} description={"Bedroom"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room5.jpg"} description={"Bedroom"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room6.jpg"} description={"Bedroom"} />
                 </div>
             </div>
 
@@ -27,12 +27,27 @@ export default function Page() {
              <div className="container relative max-w-screen-xl mx-auto pt-5 pb-20">
                 <h1 className="text-3xl text-green-950 font-semibold mx-3 md:mx-0">Living Room</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <ProductDescription imageUrl={"/Wallpaper/Livingroom/room1.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Livingroom/room2.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Livingroom/room3.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Livingroom/room4.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Livingroom/room5.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpaper/Livingroom/room6.jpg"} description={"Living Room"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living1.jpg"} description={"Living Room"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living2.jpg"} description={"Living Room"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living3.jpg"} description={"Living Room"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living4.jpg"} description={"Living Room"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living5.jpg"} description={"Living Room"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living6.jpg"} description={"Living Room"} />
+                </div>
+            </div>
+
+            <div className="container relative max-w-screen-xl mx-auto pt-5 pb-20">
+                <h1 className="text-3xl text-green-950 font-semibold mx-3 md:mx-0">Tv Unit</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit1.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit2.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit3.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit4.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit5.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit6.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit7.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit8.jpg"} description={"Tv Unit"} />
+                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit9.jpg"} description={"Tv Unit"} />
                 </div>
             </div>
 
