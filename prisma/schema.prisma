@@ -23,7 +23,7 @@ model bookingService {
   id          String   @id @default(uuid())
   name        String
   phoneNumber String
-  services    String   
+  service     String
   address     String
   timeStamp   DateTime @default(now())
 }

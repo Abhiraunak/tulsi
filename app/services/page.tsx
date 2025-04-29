@@ -12,10 +12,12 @@ import { z } from "zod";
 import { Bounce, toast } from "react-toastify";
 
 const bookingSchema = z.object({
-    name: z.string().min(3, "Please enter your full name"),
-    phoneNumber: z.string().min(10, "Please enter a valid number"),
+    name: z.string().min(5, "Name must be at least 5 characters"), // Changed from 3 to 5
+    phoneNumber: z.string()
+        .min(10, "Phone number must be 10 digits")
+        .regex(/^\d+$/, "Only numbers allowed"),
     service: z.string().min(1, "Please choose a service"),
-    address: z.string().min(5, "Please enter your full address")
+    address: z.string().min(5, "Address must be at least 5 characters")
 });
 
 export default function Services() {
@@ -46,7 +48,6 @@ export default function Services() {
         e.preventDefault();
         setLoading(true);
 
-        // Perform input validation before sending to backend
         const validation = bookingSchema.safeParse(formData);
         if (!validation.success) {
             toast.error(validation.error.errors[0].message);
@@ -62,9 +63,10 @@ export default function Services() {
             });
 
             const data = await res.json();
+
             if (!res.ok) {
-                toast.error(data.message || "Something went wrong!", {
-                    position: "bottom-left",
+                toast.error(data.message || "Failed to book service", {
+                    position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: false,
@@ -152,10 +154,10 @@ export default function Services() {
                                                 <SelectValue placeholder="Choose a Service" />
                                             </SelectTrigger>
                                             <SelectContent>
-                                                <SelectItem value="wallPaint">Wall Paint</SelectItem>
+                                                <SelectItem value="WallPaint">Wall Paint</SelectItem>
                                                 <SelectItem value="WallPanel">Wall Panel</SelectItem>
                                                 <SelectItem value="WallPaper">WallPaper</SelectItem>
-                                                <SelectItem value="FalseCelling">False Celling</SelectItem>
+                                                <SelectItem value="FalseCeiling">False Ceiling</SelectItem>
                                                 <SelectItem value="Flooring">Flooring</SelectItem>
                                             </SelectContent>
                                         </Select>

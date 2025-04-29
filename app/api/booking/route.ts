@@ -1,45 +1,77 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client"
+import prisma from "@/prisma";
 import { z } from "zod";
 
-const db = new PrismaClient();
-
-// Zod schema for validation
+// Enhanced validation schema
 const bookingDetails = z.object({
-    name       : z.string().min(5, "Please enter your full name"),
-    phoneNumber: z.string().min(10, "Please enter a valid phone number"),
-    service    : z.string().min(1, "Please select a service"),
-    address    : z.string().min(5, "Please enter a valid address")
+    name: z.string().min(5, "Name must be at least 5 characters").max(50),
+    phoneNumber: z.string()
+        .min(10, "Invalid phone number")
+        .max(15)
+        .regex(/^\d+$/, "Only numbers allowed"),
+    service: z.enum([
+        'WallPaint',
+        'WallPanel',
+        'WallPaper',
+        'FalseCeiling',
+        'Flooring'
+    ]),
+    address: z.string().min(5, "Address must be at least 5 characters").max(100)
 });
 
 export async function POST(req: NextRequest) {
     try {
-        // Parse and validate request body
-        const data = bookingDetails.parse(await req.json());
+        const result = bookingDetails.safeParse(await req.json());
 
-        // Save booking to the database
-        const booking = await db.bookingService.create({
+        if (!result.success) {
+            return NextResponse.json(
+                { message: result.error.errors[0].message },
+                { status: 400 }
+            );
+        }
+
+        const { name, phoneNumber, service, address } = result.data;
+
+        // Validate phone number format
+        if (!/^\d+$/.test(phoneNumber)) {
+            return NextResponse.json(
+                { message: "Invalid phone number format" },
+                { status: 400 }
+            );
+        }
+
+        const booking = await prisma.bookingService.create({
             data: {
-                name: data.name,
-                phoneNumber : data.phoneNumber,
-                services: data.service,
-                address: data.address
+                name: name.trim(),
+                phoneNumber: phoneNumber.trim(),
+                service: service.trim(),
+                address: address.trim(),
+                timeStamp: new Date()
             }
         });
 
-        return NextResponse.json({
-            booking,
-            message: "Booking successful",
-        }, { status: 201 });
+        return NextResponse.json(
+            {
+                bookingId: booking.id,
+                message: "Booking successful"
+            },
+            { status: 201 }
+        );
 
-    } catch (e) {
-        if (e instanceof z.ZodError) {
-            return NextResponse.json({
-                message: e.errors[0].message  // Return the first validation error
-            }, { status: 400 });
+    } catch (e: any) {
+        console.error("Booking Error:", e);
+        
+        // Handle Prisma errors
+        if (e.code === 'P2002') {
+            return NextResponse.json(
+                { message: "Duplicate booking detected" },
+                { status: 409 }
+            );
         }
-        return NextResponse.json({
-            message: "Error while booking a service"
-        }, { status: 500 });
+
+        return NextResponse.json(
+            { message: "Internal server error" },
+            { status: 500 }
+        );
     }
 }
