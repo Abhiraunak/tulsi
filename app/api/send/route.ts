@@ -11,7 +11,7 @@ export default async function handler(
 ) {
   try {
     const { data } = await resend.emails.send({
-      from: "Tulsi <no-reply@tulsi.com>",
+      from: "Tulsi <no-reply@hellotulsi.com>",
       to: ["hellotulsiofficial@gmail.com"],
       subject: "New Booking Details",
       react: EmailTemplate({ Name: 'Admin' }) as ReactNode ,
