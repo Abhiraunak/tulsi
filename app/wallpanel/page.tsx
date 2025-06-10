@@ -75,7 +75,6 @@ export default function Wallpanels() {
             <div className="fixed bottom-20 right-5 z-[1100]">
                 <WhatsappButton />
             </div>
-
         </>
     );
 }

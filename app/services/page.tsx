@@ -56,15 +56,17 @@ export default function Services() {
         }
 
         try {
-            const res = await fetch('/api/booking', {
+
+            // create booking
+            const bookingRes = await fetch('/api/booking', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
             });
 
-            const data = await res.json();
+            const data = await bookingRes.json(); //wait for save the data in database
 
-            if (!res.ok) {
+            if (!bookingRes.ok) {
                 toast.error(data.message || "Failed to book service", {
                     position: "top-center",
                     autoClose: 3000,
@@ -77,6 +79,13 @@ export default function Services() {
                     transition: Bounce,
                 });
             }
+
+            // send email conformaiton to the admin
+            const emailRes = await fetch('/api/email', {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+            });
+            
 
             toast.success("Booking successful", {
                 position: "top-center",
