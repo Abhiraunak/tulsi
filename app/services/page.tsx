@@ -81,7 +81,7 @@ export default function Services() {
             }
 
             // send email conformaiton to the admin
-            const emailRes = await fetch('/api/email', {
+            const emailRes = await fetch('/api/send', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
             });
