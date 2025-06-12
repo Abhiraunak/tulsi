@@ -1,3 +1,4 @@
+"use client"
 import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table"
 import { useEffect, useState } from "react"
 
