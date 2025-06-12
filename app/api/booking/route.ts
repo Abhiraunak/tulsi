@@ -75,3 +75,19 @@ export async function POST(req: NextRequest) {
         );
     }
 }
+
+export async function GET(req: NextRequest) {
+  try {
+    const bookingData = await prisma.bookingService.findMany({
+      orderBy: { timeStamp: 'desc' }, // newest first
+    });
+
+    return NextResponse.json(bookingData, { status: 200 });
+  } catch (e) {
+    console.error('Error fetching booking data:', e);
+    return NextResponse.json(
+      { message: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}

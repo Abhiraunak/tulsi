@@ -1,4 +1,5 @@
 import ProductAppbar from "@/components/ProductAppbar";
+import TableShow from "@/components/TableShow";
 
 export default function Dashboard() {
     return (
@@ -7,7 +8,13 @@ export default function Dashboard() {
                 <ProductAppbar heading="Dashboard" />
             </nav>
             <div className="pt-[6rem]">
-                <h1 className="text-4xl text-green-900 px-5 font-semibold">Recent booking</h1>
+                <h1 className="text-4xl px-5 font-semibold">Recent booking</h1>
+                <div className="pl-6 pt-2 pr-6">
+                    <TableShow />
+                </div>
+                <div>
+                    
+                </div>
             </div>
         </>
     )
