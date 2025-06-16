@@ -12,9 +12,6 @@ export default function Dashboard() {
                 <div className="pl-6 pt-2 pr-6">
                     <TableShow />
                 </div>
-                <div>
-                    
-                </div>
             </div>
         </>
     )
