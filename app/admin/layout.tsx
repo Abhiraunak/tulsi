@@ -1,4 +1,3 @@
-// app/admin/layout.tsx
 import { redirect } from 'next/navigation'
 import { getUserFromCookie } from '@/lib/auth'
 
