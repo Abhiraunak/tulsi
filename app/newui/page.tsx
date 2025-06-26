@@ -1,16 +1,17 @@
-"use client";
+import Footer from "@/components/Footer";
 import Heronew from "@/components/Heronew";
-import { useRouter } from "next/navigation";
+import { HovermeButton } from "@/components/ui/hovermeButton";
+// import { VelocityScroll } from "@/components/ui/scrollbasedvelocity"; 
+import { TextAnimate } from "@/components/ui/text-animate";
+import WhatsappButton from "@/components/WhatsAppIntegration";
 
 export default function Page() {
-    const router = useRouter();
 
     return (
         <>
             {/* Hero Section */}
-            <div className="h-screen">
-                <Heronew />
-            </div>
+            <Heronew />
+            <WhatsappButton/>
 
             {/* Wallpanel Content Section */}
             <section className="relative bg-slate-50 overflow-hidden">
@@ -25,8 +26,9 @@ export default function Page() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:items-center">
                         {/* Text Content */}
                         <div className="flex flex-col gap-4">
+                             <TextAnimate text="Wallpanel" type="fadeInUp" />
                             {/* Card 1 */}
-                            <div className="bg-white p-5 rounded-xl shadow-md w-full">
+                            <div className="bg-white p-5 rounded-xl shadow-md shadow-green-500 w-full">
                                 <div className="flex items-start gap-2">
                                     <span className="text-green-600 text-xl">✔️</span>
                                     <p className="text-gray-700 text-sm sm:text-base">
@@ -36,7 +38,7 @@ export default function Page() {
                             </div>
 
                             {/* Card 2 */}
-                            <div className="bg-white z-10 p-5 rounded-xl shadow-md w-full md:ml-[8rem]">
+                            <div className="bg-white z-10 p-5 rounded-xl shadow-md shadow-green-500 w-full md:ml-[8rem]">
                                 <div className="flex items-start gap-2">
                                     <span className="text-green-600 text-xl">✔️</span>
                                     <p className="text-gray-700 text-sm sm:text-base">
@@ -46,7 +48,7 @@ export default function Page() {
                             </div>
 
                             {/* Card 3 */}
-                            <div className="bg-white p-5 rounded-xl shadow-md w-full">
+                            <div className="bg-white p-5 rounded-xl shadow-md shadow-green-500 w-full">
                                 <div className="flex items-start gap-2">
                                     <span className="text-green-600 text-xl">✔️</span>
                                     <p className="text-gray-700 text-sm sm:text-base">
@@ -54,23 +56,15 @@ export default function Page() {
                                     </p>
                                 </div>
                             </div>
-
-                            {/* CTA Button */}
-                            <button
-                                onClick={() => router.push("/wallpanel")}
-                                className="relative md:ml-[5rem]  mt-4 inline-flex w-full sm:w-1/2 h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-green-50"
-                            >
-                                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                                    Know more
-                                </span>
-                            </button>
+                            <div className="mt-5 ml-20 flex items-center">
+                                <HovermeButton title={"Know more"} to={"/wallpanel"} />
+                            </div>
                         </div>
 
                         {/* Image */}
                         <div className="w-full">
                             <img
-                                src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3sCtRgxS81LrIHKBynx8Ekiz9QLL2Qrhs_g&s"
                                 alt="Showcase"
                                 className="w-full h-auto object-cover rounded-lg shadow-lg"
                             />
@@ -78,6 +72,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </>
     );
 }

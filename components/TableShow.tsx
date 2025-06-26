@@ -30,14 +30,14 @@ export default function TableShow() {
   }
 }
 
-  // constantly checking the newly enter data in the database
+  // checking the newly enter data in the database at every 10 second
 
   useEffect(() => {
     fetchBookings()
 
     const interval = setInterval(() => {
       fetchBookings()
-    }, 5000) //refresh it in every 5 seconds
+    }, 10 * 1000) //refresh it in every 10 seconds
 
     return () => clearInterval(interval)
   }, [])
