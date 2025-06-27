@@ -26,6 +26,7 @@ export const WavyText: React.FC<WavyTextProps> = ({
             animate="visible"
             exit="hidden"
             variants={variants1}
+            // @ts-ignore
             transition={{ yoyo: Infinity, duration: 0.5, delay: i * 0.2 }}
             className={clsx(
               "text-center font-display font-bold drop-shadow-sm",

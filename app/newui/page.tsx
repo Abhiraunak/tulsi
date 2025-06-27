@@ -56,13 +56,13 @@ export default function Page() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="mt-5 ml-20 flex items-center">
+                            <div className="mt-4 flex justify-center md:justify-start md:ml-20">
                                 <HovermeButton title={"Know more"} to={"/wallpanel"} />
                             </div>
                         </div>
 
                         {/* Image */}
-                        <div className="w-full">
+                        <div className="w-full order-1 md:order-2 mb-6 md:mb-0">
                             <img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3sCtRgxS81LrIHKBynx8Ekiz9QLL2Qrhs_g&s"
                                 alt="Showcase"
