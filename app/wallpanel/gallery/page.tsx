@@ -5,7 +5,7 @@ import WhatsappButton from "@/components/WhatsAppIntegration";
 
 export default function Page() {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Wallpanel" />
             </nav>
