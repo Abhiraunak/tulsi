@@ -5,6 +5,7 @@ import { TextAnimate } from "@/components/ui/text-animate";
 import { ServiceSection } from "@/components/ServiceSection";
 import { HovermeButton } from "@/components/ui/hovermeButton";
 import Footer from "@/components/Footer";
+import { Review } from "@/components/Review";
 
 export default function Home() {
   return (
@@ -179,6 +180,21 @@ export default function Home() {
                 to="/services"
               />
             </div>
+          </div>
+        </section>
+
+        {/* testnomial section */}
+        <section className="relative bg-gradient-to-bl from-[#84cc16] via-[#16a34a] to-[#0f766e] py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center justify-center mb-12 md:mb-16">
+              <TextAnimate
+                className="text-white text-3xl md:text-5xl font-bold"
+                text="What our customers say"
+                type="fadeInUp"
+              />
+            </div>
+
+            <Review />
           </div>
         </section>
         <Footer />
