@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Page() {
     return (
-        <div className="relative max-w-screen-2xl mx-auto min-h-screen bg-black/20 overflow-hidden">
+        <div className="relative max-w-screen-2xl mx-auto min-h-screen bg-black/20 overflow-hidden select-none">
             <Appbar />
             <BackgroundVideo />
             <div className="flex flex-col items-center justify-center h-[90vh] text-center px-4 z-10">

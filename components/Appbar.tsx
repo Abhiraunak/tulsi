@@ -71,7 +71,7 @@ const Appbar = () => {
                 </Link>
 
                 {/* Desktop nav */}
-                <ul className="hidden sm:flex space-x-6 text-gray-900 text-xl font-semibold">
+                <ul className="hidden sm:flex space-x-6 text-green-800 text-xl font-semibold">
                     <li className="hover:underline cursor-pointer">Home</li>
                     <li className="hover:underline cursor-pointer">Service</li>
                     <li className="hover:underline cursor-pointer">Login</li>

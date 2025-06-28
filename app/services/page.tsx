@@ -113,10 +113,10 @@ export default function Services() {
     };
 
     return (
-        <>
+        <div className="overflow-x-hidden">
             <ProductAppbar heading={"Book a Service"} />
             <WhatsappButton />
-            <div className="bg-slate-800 h-[105vh] md:h-screen md:w-full w-[105%]">
+            <div className="bg-slate-800 h-[105vh] md:h-screen w-full">
                 <div className="absolute  top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] px-2 mx-3 md:mx-0 md:p-6">
                     <BackgroundGradient>
                         <Card className="w-[25rem] rounded-2xl">
@@ -186,6 +186,6 @@ export default function Services() {
                     </BackgroundGradient>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
