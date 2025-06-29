@@ -185,7 +185,7 @@ export default function Home() {
 
         {/* testnomial section */}
         <section className="relative bg-gradient-to-bl from-[#84cc16] via-[#16a34a] to-[#0f766e] py-16 md:py-24">
-          <div className="container mx-auto px-4">
+          <div className="container overflow-hidden mx-auto px-4">
             <div className="flex flex-col items-center justify-center mb-12 md:mb-16">
               <TextAnimate
                 className="text-white text-3xl md:text-5xl font-bold"

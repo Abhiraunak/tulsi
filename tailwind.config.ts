@@ -7,6 +7,14 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "animate-marquee",
+    "animate-marquee-vertical",
+    "[--duration:40s]",
+    "[--gap:1rem]",
+    "group-hover:[animation-play-state:paused]",
+    "[animation-direction:reverse]",
+  ],
   theme: {
     extend: {
       colors: {
