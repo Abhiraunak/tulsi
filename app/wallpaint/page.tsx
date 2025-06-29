@@ -7,7 +7,7 @@ import WhatsappButton from '@/components/WhatsAppIntegration';
 
 export default function Home() {
     return (
-        <div className="bg-gray-50 min-h-screen font-sans">
+        <div className="bg-green-100 min-h-screen font-sans overflow-x-hidden">
             <ProductAppbar heading={'Wallpaint'} />
             {/* Hero Section */}
             <section className="relative text-center py-32 bg-gradient-to-r from-green-700 to-teal-800 text-white overflow-hidden flex flex-col items-center justify-center">

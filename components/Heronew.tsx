@@ -4,8 +4,14 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { WordRotate } from "@/components/ui/word-rotate";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+    const router = useRouter();
+
+    function handleRoute(to: string){
+        router.push(to);
+    }
     return (
         <div className="relative max-w-screen-2xl mx-auto min-h-screen bg-black/20 overflow-hidden select-none">
             <Appbar />
@@ -42,10 +48,14 @@ export default function Page() {
                     transition={{ duration: 0.3, delay: 1 }}
                     className="relative z-10 mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto"
                 >
-                    <button className="w-full sm:w-auto px-8 py-3 rounded-lg bg-[#008000] font-medium text-white transition-all duration-300 hover:bg-[#006400]">
+                    <button 
+                        onClick={() => handleRoute("/wallpanel")}
+                        className="w-full sm:w-auto px-8 py-3 rounded-lg bg-[#008000] font-medium text-white transition-all duration-300 hover:bg-[#006400]">
                         Explore Now
                     </button>
-                    <button className="w-full sm:w-auto px-8 py-3 rounded-lg border border-gray-300 bg-white font-medium text-black transition-all duration-300 hover:bg-gray-100">
+                    <button 
+                        onClick={() => handleRoute("/services")}
+                        className="w-full sm:w-auto px-8 py-3 rounded-lg border border-gray-300 bg-white font-medium text-black transition-all duration-300 hover:bg-gray-100">
                         Contact Support
                     </button>
                 </motion.div>

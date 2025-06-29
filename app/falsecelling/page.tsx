@@ -7,6 +7,7 @@ import { Testonomial } from "@/components/Testonomial";
 import ProductAppbar from "@/components/ProductAppbar";
 import BookingButton from "@/components/BookingButoon";
 import WhatsappButton from "@/components/WhatsAppIntegration";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 
 export default function Wallpanels() {
@@ -17,7 +18,7 @@ export default function Wallpanels() {
     }, []);
 
     return (
-        <>
+        <div className="overflow-x-hidden">
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="False-Celling" />
             </nav>
@@ -29,8 +30,12 @@ export default function Wallpanels() {
                 />
             </main>
             <section className="container relative max-w-screen-xl mx-auto">
-                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Space</h1>
-                <div className="flex items-center justify-center mx-8 md:mx-0">
+                <TextAnimate
+                    className="text-green-900 text-4xl md:text-6xl font-bold mt-2 mb-3 mx-4"
+                    text="Browse Space"
+                    type="popIn"
+                />
+                <div className="flex items-center justify-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <ProductDescription imageUrl={"/Falsecelling/bedroom/design5.jpg"} description={"Bed Rooms"} />
                         <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living Room"} />
@@ -48,19 +53,21 @@ export default function Wallpanels() {
                 />
             </div>
             <div className="container relative max-w-screen-xl mx-auto mb-10">
-                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Look</h1>
-                <div className="mx-8 md:mx-0">
+                <TextAnimate
+                    className="text-green-900 text-4xl md:text-6xl font-bold mt-2 mb-3 mx-4"
+                    text="Browse look"
+                    type="popIn"
+                />
                     <div className="grid grid-cols-1 md:grid-cols-2 ">
                         <ProductDescription imageUrl={"/Falsecelling/roof/roof1.jpg"} description={"Luxury Look"} height="400px" />
                         <ProductDescription imageUrl={"/Falsecelling/bedroom/design2.jpg"} description={"Bedroom"} height="400px" />
                         <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living room"} height="400px" />
                         <ProductDescription imageUrl={"Falsecelling/livingroom/design7.jpg"} description={"False-celling"} height="400px" />
                     </div>
-                </div>
             </div>
 
             {/* Customer Testimonial Section */}
-            <div className="container relative w-full mx-10 md:mx-auto mb-10">
+            <div className="container relative w-full mx-auto mb-10">
                 <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                     Read trusted reviews from our customers
                 </h2>
@@ -76,6 +83,6 @@ export default function Wallpanels() {
                 <WhatsappButton />
             </div>
 
-        </>
+        </div>
     );
 }

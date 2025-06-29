@@ -72,7 +72,7 @@ export default function Home() {
               "Premium materials and modern lighting integration",
               "Perfect acoustics and thermal insulation"
             ]}
-            link="/false-ceiling"
+            link="/falsecelling"
             imagePosition="left"
           />
 

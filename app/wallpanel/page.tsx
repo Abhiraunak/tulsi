@@ -7,12 +7,13 @@ import { Testonomial } from "@/components/Testonomial";
 import ProductAppbar from "@/components/ProductAppbar";
 import BookingButton from "@/components/BookingButoon";
 import WhatsappButton from "@/components/WhatsAppIntegration";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export default function Wallpanels() {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        setIsClient(true); 
+        setIsClient(true);
     }, []);
 
     return (
@@ -20,7 +21,7 @@ export default function Wallpanels() {
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Wall panel" />
             </nav>
-            
+
             <main className="w-full mb-10">
                 <Header
                     imageUrl={"/Wallpanels/Panel30.png"}
@@ -28,9 +29,13 @@ export default function Wallpanels() {
                     bottomText={"Wall panels: Style, strength, stunning simplicity."}
                 />
             </main>
-            
-            <section className="w-full px-4 max-w-screen-xl mx-auto">
-                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6">Browse Space</h1>
+
+            <section className="w-full mx-auto">
+                <TextAnimate
+                    className="text-green-900 text-4xl md:text-6xl font-bold mt-2 mb-3 mx-4"
+                    text="Browse Space"
+                    type="popIn"
+                />
                 <div className="w-full">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
@@ -39,7 +44,7 @@ export default function Wallpanels() {
                     </div>
                 </div>
             </section>
-            
+
             <div className="w-full px-4 max-w-screen-2xl mx-auto py-5 md:py-20">
                 <ProductBetween
                     imageUrl={"/Wallpanels/Panel30.png"}
@@ -49,9 +54,13 @@ export default function Wallpanels() {
                     to={"/wallpanel/gallery"}
                 />
             </div>
-            
-            <div className="w-full px-4 max-w-screen-xl mx-auto mb-10">
-                <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6">Browse Look</h1>
+
+            <div className="w-full mx-auto mb-10">
+                <TextAnimate
+                    className="text-green-900 text-4xl md:text-6xl font-bold mt-2 mb-3 mx-4"
+                    text="Browse Look"
+                    type="popIn"
+                />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
                     <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />

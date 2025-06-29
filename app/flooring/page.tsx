@@ -17,11 +17,11 @@ export default function Wallpanels() {
     }, []);
 
     return (
-        <>
+        <div className="overflow-x-hidden bg-green-100">
             <nav className="w-full sticky top-0 z-[1000] bg-white shadow-md">
                 <ProductAppbar heading="Flooring" />
             </nav>
-            <main className="max-w-screen h-1/4 mb-10">
+            <main className="max-w-screen h-1/4 mb-10 mx-auto">
                 <Header
                     imageUrl={"/Flooring/Flooring1.png"}
                     headingText={"Strong Foundations Begin with the Right Flooring."}
@@ -30,7 +30,7 @@ export default function Wallpanels() {
             </main>
             <section className="container relative max-w-screen-xl mx-auto">
                 <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Space</h1>
-                <div className="flex items-center justify-center mx-8 md:mx-0">
+                <div className="flex items-center justify-center mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <ProductDescription imageUrl={"/Flooring/flooring4.jpg"} description={"Living Rooms"} />
                         <ProductDescription imageUrl={"/Flooring/flooring7.jpg"} description={"Bathroom"} />
@@ -49,7 +49,7 @@ export default function Wallpanels() {
             </div>
             <div className="container relative max-w-screen-xl mx-auto mb-10">
                 <h1 className="text-2xl text-green-950 md:text-4xl font-semibold mb-6 mx-2">Browse Look</h1>
-                <div className="mx-8 md:mx-0">
+                <div className="mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 ">
                         <ProductDescription imageUrl={"/Flooring/flooring22.jpg"} description={"Luxury Look"} height="400px" />
                         <ProductDescription imageUrl={"/Flooring/flooring12.jpg"} description={"Wooden"} height="400px" />
@@ -60,7 +60,7 @@ export default function Wallpanels() {
             </div>
 
             {/* Customer Testimonial Section */}
-            <div className="container relative w-full mx-10 md:mx-auto mb-10">
+            <div className="container relative w-full mx-auto mb-10">
                 <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight text-green-950 sm:text-5xl">
                     Read trusted reviews from our customers
                 </h2>
@@ -76,6 +76,6 @@ export default function Wallpanels() {
                 <WhatsappButton />
             </div>
 
-        </>
+        </div>
     );
 }
