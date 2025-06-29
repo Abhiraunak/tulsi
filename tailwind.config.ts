@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,10 +10,9 @@ export default {
   safelist: [
     "animate-marquee",
     "animate-marquee-vertical",
-    "[--duration:40s]",
-    "[--gap:1rem]",
-    "group-hover:[animation-play-state:paused]",
     "[animation-direction:reverse]",
+    "group-hover:[animation-play-state:paused]",
+    "gap-[var(--gap)]",
   ],
   theme: {
     extend: {
@@ -85,10 +84,12 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: "marquee var(--duration, 40s) linear infinite",
-        "marquee-vertical": "marquee-vertical var(--duration, 40s) linear infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+
+export default config;
