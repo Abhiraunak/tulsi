@@ -1,6 +1,7 @@
 import BookingButton from "@/components/BookingButoon";
 import ProductAppbar from "@/components/ProductAppbar";
 import ProductDescription from "@/components/ProductDescription";
+import { TextAnimate } from "@/components/ui/text-animate";
 import WhatsappButton from "@/components/WhatsAppIntegration";
 
 export default function Page() {
@@ -10,46 +11,101 @@ export default function Page() {
                 <ProductAppbar heading="Wallpanel" />
             </nav>
 
-            {/* Bedroom display start from here */}
-            <div className="container relative max-w-screen-xl mx-auto pt-20">
-                <h1 className="text-3xl text-green-950 font-semibold mx-3 md:mx-0">Bedroom</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room1.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room2.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room3.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room4.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room5.jpg"} description={"Bedroom"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Bedroom/room6.jpg"} description={"Bedroom"} />
+             {/* Bedroom display start from here */}
+            <section className="mx-auto mt-20">
+                <TextAnimate
+                    className="text-green-900 text-4xl font-bold mt-2 mb-3 mx-4"
+                    text="Bedroom"
+                    type="popIn"
+                />
+                <div className="w-full">
+                    <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-4">
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Bedroom/room1.jpg"} description={"Bedroom"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Bedroom/room2.jpg"} description={"Bedroom"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Bedroom/room3.jpg"} description={"Bedroom"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Bedroom/room4.jpg"} description={"Bedroom"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Bedroom/room5.jpg"} description={"Bedroom"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Bedroom/room6.jpg"} description={"Bedroom"} />
+                        </div>
+
+                    </div>
                 </div>
-            </div>
+            </section>
 
              {/* Living room display start from here */}
-             <div className="container relative max-w-screen-xl mx-auto pt-5 pb-20">
-                <h1 className="text-3xl text-green-950 font-semibold mx-3 md:mx-0">Living Room</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living1.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living2.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living3.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living4.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living5.jpg"} description={"Living Room"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Livingroom/living6.jpg"} description={"Living Room"} />
-                </div>
-            </div>
+             <section className="mx-auto mt-20">
+                <TextAnimate
+                    className="text-green-900 text-4xl font-bold mt-2 mx-4 mb-5"
+                    text="Living room"
+                    type="popIn"
+                />
+                <div className="w-full">
+                    <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-4">
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Livingroom/living1.jpg"} description={"Living room"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Livingroom/living2.jpg"} description={"Living room"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Livingroom/living3.jpg"} description={"Living room"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Livingroom/living4.jpg"} description={"Living room"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Livingroom/living5.jpg"} description={"Living room"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Livingroom/living6.jpg"} description={"Living room"} />
+                        </div>
 
-            <div className="container relative max-w-screen-xl mx-auto pt-5 pb-20">
-                <h1 className="text-3xl text-green-950 font-semibold mx-3 md:mx-0">Tv Unit</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit1.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit2.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit3.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit4.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit5.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit6.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit7.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit8.jpg"} description={"Tv Unit"} />
-                    <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit9.jpg"} description={"Tv Unit"} />
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            {/* Tv unit start from here */}
+           <section className="mx-auto mt-20">
+                <TextAnimate
+                    className="text-green-900 text-4xl font-bold mt-2 mb-3 mx-4"
+                    text="Tv unit"
+                    type="popIn"
+                />
+                <div className="w-full">
+                    <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-4">
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit1.jpg"} description={"Tv unit"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit2.jpg"} description={"Tv unit"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit3.jpg"} description={"Tv unit"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit4.jpg"} description={"Tv unit"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit5.jpg"} description={"Tv unit"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Tvunit/unit6.jpg"} description={"Tv unit"} />
+                        </div>
+
+                    </div>
+                </div>
+            </section>
 
             <div className="fixed bottom-0 left-0 w-full bg-gray-100 shadow-md text-white text-center p-4 z-[1000]">
                 <BookingButton />

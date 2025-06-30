@@ -14,7 +14,7 @@ export default function Wallpanels() {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        setIsClient(true); 
+        setIsClient(true);
     }, []);
 
     return (
@@ -35,19 +35,25 @@ export default function Wallpanels() {
                     text="Browse Space"
                     type="popIn"
                 />
-                <div className="flex items-center justify-center">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        <ProductDescription imageUrl={"/Falsecelling/bedroom/design5.jpg"} description={"Bed Rooms"} />
-                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living Room"} />
-                        <ProductDescription imageUrl={"/Falsecelling/roof/roof1.jpg"} description={"Celling"} />
+                <div className="w-full">
+                    <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-4">
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Panel12.jpg"} description={"Tv Unit"} />
+                        </div>
+                        <div className="w-full max-w-md sm:max-w-none">
+                            <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Bedroom"} />
+                        </div>
                     </div>
                 </div>
             </section>
-            <div className="container relative max-w-screen-2xl mx-auto pt-5 md:pt-20 pb-10">
+            <div className="w-full py-5 md:py-20">
                 <ProductBetween
                     imageUrl={"/Wallpanels/Panel30.png"}
                     headingText={"Style it your way"}
-                    bottomText={"Shape your spaces with most soothing trends & make a statement like never before"}
+                    bottomText={"Shape your spaces with most soothing trends"}
                     buttonText={"Browse all space"}
                     to={"/falsecelling/gallery"}
                 />
@@ -58,12 +64,20 @@ export default function Wallpanels() {
                     text="Browse look"
                     type="popIn"
                 />
-                    <div className="grid grid-cols-1 md:grid-cols-2 ">
-                        <ProductDescription imageUrl={"/Falsecelling/roof/roof1.jpg"} description={"Luxury Look"} height="400px" />
-                        <ProductDescription imageUrl={"/Falsecelling/bedroom/design2.jpg"} description={"Bedroom"} height="400px" />
-                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living room"} height="400px" />
-                        <ProductDescription imageUrl={"Falsecelling/livingroom/design7.jpg"} description={"False-celling"} height="400px" />
+                <div className="flex flex-col items-center sm:grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="w-full max-w-md sm:max-w-none">
+                        <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
                     </div>
+                    <div className="w-full max-w-md sm:max-w-none">
+                        <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />
+                    </div>
+                    <div className="w-full max-w-md sm:max-w-none">
+                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Wallpanel"} height="400px" />
+                    </div>
+                    <div className="w-full max-w-md sm:max-w-none">
+                        <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Wallpanel"} height="400px" />
+                    </div>
+                </div>
             </div>
 
             {/* Customer Testimonial Section */}
@@ -71,7 +85,7 @@ export default function Wallpanels() {
                 <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                     Read trusted reviews from our customers
                 </h2>
-                {isClient && <Testonomial />} 
+                {isClient && <Testonomial />}
             </div>
 
             <div className="fixed bottom-0 left-0 w-full bg-gray-100 shadow-md text-white text-center p-4 z-[1000]">

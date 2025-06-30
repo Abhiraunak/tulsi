@@ -1,36 +1,32 @@
-import { NextResponse, type NextRequest } from 'next/server'
-import { verifyJwt } from '@/lib/jwt/jwt'
+import { NextRequest, NextResponse } from 'next/server';
+import jwt from 'jsonwebtoken';
+
+const SECRET_KEY = process.env.JWT_SECRET || 'dev-secret';
 
 export function middleware(request: NextRequest) {
-  const token = request.cookies.get('auth-token')?.value ?? ''
-  const pathname = request.nextUrl.pathname
+  const token = request.cookies.get('token')?.value;
 
-  // Type-safe token check
-  const isProtectedRoute = pathname.startsWith('/admin/dashboard')
-  let isValidToken = false
-
-  if (isProtectedRoute) {
-    try {
-      const decoded = verifyJwt(token)
-      // You can optionally validate the shape of `decoded` here if needed
-      isValidToken = !!decoded
-    } catch (error) {
-      isValidToken = false
+  if (request.nextUrl.pathname.startsWith('/admin')) {
+    if (!token) {
+      return NextResponse.redirect(new URL('/login', request.url));
     }
 
-    if (!isValidToken) {
-      const signInUrl = request.nextUrl.clone()
-      signInUrl.pathname = '/admin/signin'
-      signInUrl.searchParams.set('callbackUrl', pathname)
+    try {
+      const decoded = jwt.verify(token, SECRET_KEY) as any;
 
-      return NextResponse.redirect(signInUrl)
+      if (decoded.role !== 'admin') {
+        return NextResponse.redirect(new URL('/login', request.url));
+      }
+
+      return NextResponse.next();
+    } catch {
+      return NextResponse.redirect(new URL('/login', request.url));
     }
   }
 
-  return NextResponse.next()
+  return NextResponse.next();
 }
 
-// Match only admin dashboard routes
 export const config = {
-  matcher: ['/admin/dashboard/:path*'],
-}
+  matcher: ['/admin/:path*'],
+};
