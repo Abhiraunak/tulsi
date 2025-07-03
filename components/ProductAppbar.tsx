@@ -14,7 +14,7 @@ export default function Page({heading}: ProductAppbarProps) {
             <div className="flex items-center">
                 <Link href={"/"}>
                     <Image
-                        src={"/tulsi-logo1.png"}
+                        src={"/new-logo.png"}
                         alt={"tulsi log"}
                         height={20}
                         width={60}

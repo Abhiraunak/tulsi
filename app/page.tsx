@@ -5,7 +5,8 @@ import { TextAnimate } from "@/components/ui/text-animate";
 import { ServiceSection } from "@/components/ServiceSection";
 import { HovermeButton } from "@/components/ui/hovermeButton";
 import Footer from "@/components/Footer";
-import { Review } from "@/components/Review";
+import { AnimatedNo } from "@/components/AnimatedNumber";
+import Review from "@/components/Review";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         />
         <meta property="og:url" content="https://hellotulsi.in/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://hellotulsi.in/" /> // replace with the website preview image aka logo
+        <meta property="og:image" content="https://hellotulsi.in/new-logo.png" /> // replace with the website preview image aka logo
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -66,7 +67,7 @@ export default function Home() {
 
           <ServiceSection
             title="False-ceiling"
-            imageUrl="/Falsecelling/livingroom/design1.jpg"
+            imageUrl="/Falsecelling/roof/roof2.jpg"
             features={[
               "Elevate your space with custom-designed ceilings",
               "Premium materials and modern lighting integration",
@@ -90,7 +91,7 @@ export default function Home() {
 
           <ServiceSection
             title="Flooring"
-            imageUrl="/Flooring/flooring1.png"
+            imageUrl="/Flooring/flooring26.jpg"
             features={[
               "Wide range of materials: hardwood, laminate, tile",
               "Professional installation with precision",
@@ -102,7 +103,7 @@ export default function Home() {
 
           <ServiceSection
             title="Wallpaper"
-            imageUrl="/Wallpaper/wallpaper1.png"
+            imageUrl="/Wallpaper/wallpaper5.jpg"
             features={[
               "Extensive collection of designs and patterns",
               "Professional application without bubbles",
@@ -129,48 +130,46 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               <div className="bg-white shadow-xl rounded-2xl p-6 transition-all duration-300 hover:scale-[1.03]">
+                <div className="flex flex-col items-center justify-center mt-7 mx-auto">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+                    Expert Craftsmanship
+                  </h3>
+                  <p className="text-gray-600 text-center">
+                    Professionally committed to your vision
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white shadow-xl rounded-2xl p-6 transition-all duration-300 hover:scale-[1.03]">
                 <div className="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-green-600 text-xl font-bold">1</span>
+                  <AnimatedNo value={80} duration={1500} className="text-green-500" /><span className="text-xl font-semibold">+</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
-                  reson
+                  Happy customer
                 </h3>
                 <p className="text-gray-600 text-center">
-                  describe
+                  Creating experiences that matter
                 </p>
               </div>
               <div className="bg-white shadow-xl rounded-2xl p-6 transition-all duration-300 hover:scale-[1.03]">
                 <div className="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-green-600 text-xl font-bold">2</span>
+                  <AnimatedNo value={100} duration={1500} className="text-green-500" /><span className="text-xl font-semibold">+</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
-                  reason
+                  Project
                 </h3>
                 <p className="text-gray-600 text-center">
-                  describe
+                  Delivering excellence
                 </p>
               </div>
               <div className="bg-white shadow-xl rounded-2xl p-6 transition-all duration-300 hover:scale-[1.03]">
-                <div className="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-green-600 text-xl font-bold">3</span>
+                <div className="flex flex-col items-center justify-center mt-7 mx-auto">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+                    On-Time Delivery
+                  </h3>
+                  <p className="text-gray-600 text-center">
+                    Projects completed as promised, every time
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
-                  reason
-                </h3>
-                <p className="text-gray-600 text-center">
-                  describe
-                </p>
-              </div>
-              <div className="bg-white shadow-xl rounded-2xl p-6 transition-all duration-300 hover:scale-[1.03]">
-                <div className="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-green-600 text-xl font-bold">4</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
-                  reason
-                </h3>
-                <p className="text-gray-600 text-center">
-                  describe
-                </p>
               </div>
             </div>
 

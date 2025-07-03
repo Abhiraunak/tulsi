@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Appbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
+      const router = useRouter();
 
     // Scroll detect
     useEffect(() => {
@@ -55,6 +57,10 @@ const Appbar = () => {
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const closeMenu = () => setMenuOpen(false);
 
+    function handleRoute(to:string) {
+        router.push(to)    
+    }
+
     return (
         <nav
             className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 backdrop-blur-md ${isScrolled ? "bg-white/90 text-black shadow" : "bg-transparent text-white"
@@ -72,9 +78,9 @@ const Appbar = () => {
 
                 {/* Desktop nav */}
                 <ul className="hidden sm:flex space-x-6 text-green-800 text-xl font-semibold">
-                    <li className="hover:underline cursor-pointer">Home</li>
-                    <li className="hover:underline cursor-pointer">Service</li>
-                    <li className="hover:underline cursor-pointer">Login</li>
+                    <li onClick={() => handleRoute("/")} className="hover:underline cursor-pointer">Home</li>
+                    <li onClick={() => handleRoute("/services")} className="hover:underline cursor-pointer">Service</li>
+                    <li onClick={() => handleRoute("/admin/signin")} className="hover:underline cursor-pointer">Login</li>
                 </ul>
 
                 {/* Mobile toggle */}
@@ -90,9 +96,9 @@ const Appbar = () => {
                     }`}
             >
                 <ul className="flex flex-col space-y-2 text-sm font-medium">
-                    <li onClick={closeMenu} className="hover:underline cursor-pointer">Home</li>
-                    <li onClick={closeMenu} className="hover:underline cursor-pointer">About</li>
-                    <li onClick={closeMenu} className="hover:underline cursor-pointer">Contact</li>
+                    <li onClick={() => handleRoute("/")} className="hover:underline cursor-pointer">Home</li>
+                    <li onClick={() => handleRoute("/wallpanel")} className="hover:underline cursor-pointer">About</li>
+                    <li onClick={() => handleRoute("/services")} className="hover:underline cursor-pointer">Contact</li>
                 </ul>
             </div>
         </nav>

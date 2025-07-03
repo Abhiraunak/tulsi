@@ -1,90 +1,75 @@
-import { cn } from "@/lib/utils";
-import { Marquee } from "./ui/marquee";
+import React from 'react';
+import { FaQuoteLeft } from 'react-icons/fa';
 
+const Review = () => {
+  const testimonials = [
+    {
+      id: 1,
+      name: "Rajesh Sharma",
+      role: "Homeowner, Patna",
+      review: "Tulsi Interior transformed our apartment beyond recognition. Their attention to detail and commitment to quality is unmatched. The wall panels they installed have become the centerpiece of our home!",
+      rating: 5,
+      image: "/avatar1.jpg"
+    },
+    {
+      id: 2,
+      name: "Priya Patel",
+      role: "Office Manager, Patna",
+      review: "We hired Tulsi for our office renovation and couldn't be happier. Their team was professional, punctual, and delivered exceptional results. The false ceiling design has completely changed our workspace atmosphere.",
+      rating: 5,
+      image: "/avatar2.jpg"
+    },
+    {
+      id: 3,
+      name: "Vikram Singh",
+      role: "Restaurant Owner, Patna",
+      review: "The flooring work Tulsi did for our restaurant has received countless compliments. Their team worked efficiently during non-business hours and left the place spotless. Truly a professional service!",
+      rating: 4,
+      image: "/avatar3.jpg"
+    }
+  ];
 
-const reviews = [
-  {
-    name: "Abhishek",
-    body: "I was blown away by how elegant my living room looks after Tulsi installed the false ceiling",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Rakesh Kumar",
-    body: "Tulsi completely transformed my home with their painting services",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "Ankit Mehra",
-    body: "From layout planning to choosing materials, Tulsi made sure my bedroom turned into a peaceful retreat.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Deepika Raut",
-    body: "“Tulsi did a phenomenal job with our new flooring. ",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Rohit",
-    body: "I never knew wallpaper could add so much personality to a room until Tulsi showed me the possibilities.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "Meera Patel",
-    body: "The wall panels installed by Tulsi added a premium touch to our hallway. Sleek, modern, and flawlessly fitted",
-    img: "https://avatar.vercel.sh/james",
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({
-  img,
-  name,
-  body,
-}: {
-  img: string;
-  name: string;
-  body: string;
-}) => {
   return (
-    <figure
-      className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium text-white">
-            {name}
-          </figcaption>
+    <section className="py-16 md:py-24">
+      <div className="container mx-auto px-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {testimonials.map((testimonial) => (
+            <div 
+              key={testimonial.id}
+              className="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden"
+            >
+              {/* Corner Image */}
+              <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden">
+                <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-full h-full" />
+                <div className="absolute top-4 right-4 w-16 h-16 rounded-full overflow-hidden border-4 border-white">
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full" />
+                </div>
+              </div>
+              
+              {/* Quote Icon */}
+              <div className="text-green-500 mb-6">
+                <FaQuoteLeft size={36} />
+              </div>
+              
+              {/* Review Text */}
+              <p className="text-gray-700 mb-6 italic">
+                "{testimonial.review}"
+              </p>
+              
+              {/* Client Info */}
+              <div className="flex items-center">
+                <div className="mr-4">
+                  <h3 className="font-bold text-gray-800">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <blockquote className="mt-2 text-sm text-white">{body}</blockquote>
-    </figure>
+    </section>
   );
 };
 
-export function Review() {
-  return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard  {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4"></div>
-    </div>
-  );
-}
+export default Review;
