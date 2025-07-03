@@ -6,7 +6,7 @@ import { ServiceSection } from "@/components/ServiceSection";
 import { HovermeButton } from "@/components/ui/hovermeButton";
 import Footer from "@/components/Footer";
 import { AnimatedNo } from "@/components/AnimatedNumber";
-import Review from "@/components/Review";
+import { Review } from "@/components/Review";
 
 export default function Home() {
   return (
