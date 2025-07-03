@@ -9,7 +9,7 @@ import WhatsappButton from "@/components/WhatsAppIntegration";
 import { motion } from "framer-motion";
 import { TextAnimate } from "@/components/ui/text-animate";
 
-export default function Wallpanels() {
+export default function Wallpaper() {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
@@ -50,13 +50,13 @@ export default function Wallpanels() {
                 <div className="w-full">
                     <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-4">
                         <div className="w-full max-w-md sm:max-w-none">
-                            <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
+                            <ProductDescription imageUrl={"/Wallpaper/Livingroom/room5.jpg"} description={"Living Rooms"} />
                         </div>
                         <div className="w-full max-w-md sm:max-w-none">
-                            <ProductDescription imageUrl={"/Wallpanels/Panel12.jpg"} description={"Tv Unit"} />
+                            <ProductDescription imageUrl={"/Wallpaper/wallpaper1.png"} description={"Lobby"} />
                         </div>
                         <div className="w-full max-w-md sm:max-w-none">
-                            <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Bedroom"} />
+                            <ProductDescription imageUrl={"/Wallpaper/Bedroom/room4.jpg"} description={"Bedroom"} />
                         </div>
                     </div>
                 </div>
@@ -81,16 +81,16 @@ export default function Wallpanels() {
                 />
                 <div className="flex flex-col items-center sm:grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpaper/Livingroom/room5.jpg"} description={"Luxury Look"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpaper/wallpaper5.jpg"} description={"Aesthetic"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpaper/wallpaper4.png"} description={"Affluence"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpaper/wallpaper2.png"} description={"Exquisite charm"} height="400px" />
                     </div>
                 </div>
             </div>

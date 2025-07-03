@@ -72,13 +72,13 @@ export default function Wallpanels() {
                         <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Exquisite charm"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Affluence"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Aesthetic"} height="400px" />
                     </div>
                 </div>
             </div>

@@ -38,13 +38,13 @@ export default function Wallpanels() {
                 <div className="w-full">
                     <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-4">
                         <div className="w-full max-w-md sm:max-w-none">
-                            <ProductDescription imageUrl={"/Wallpanels/Panel1.jpg"} description={"Living Rooms"} />
+                            <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Living Rooms"} />
                         </div>
                         <div className="w-full max-w-md sm:max-w-none">
-                            <ProductDescription imageUrl={"/Wallpanels/Panel12.jpg"} description={"Tv Unit"} />
+                            <ProductDescription imageUrl={"/Falsecelling/bedroom/design6.jpg"} description={"Bedroom"} />
                         </div>
                         <div className="w-full max-w-md sm:max-w-none">
-                            <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Bedroom"} />
+                            <ProductDescription imageUrl={"/Falsecelling/roof/roof3.jpg"} description={"Celling"} />
                         </div>
                     </div>
                 </div>
@@ -66,16 +66,16 @@ export default function Wallpanels() {
                 />
                 <div className="flex flex-col items-center sm:grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel30.png"} description={"Luxury Look"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design8.jpg"} description={"Luxury Look"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel31.png"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/roof/roof3.jpg"} description={"Affluence"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel13.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/livingroom/design1.jpg"} description={"Aesthetic"} height="400px" />
                     </div>
                     <div className="w-full max-w-md sm:max-w-none">
-                        <ProductDescription imageUrl={"/Wallpanels/Panel26.jpg"} description={"Wallpanel"} height="400px" />
+                        <ProductDescription imageUrl={"/Falsecelling/bedroom/design6.jpg"} description={"Exquisite charm"} height="400px" />
                     </div>
                 </div>
             </div>

@@ -7,21 +7,21 @@ export function Testonomial() {
         "Excellent service! The wall panels look stunning, and the installation was quick and hassle-free. Definitely worth it!",
       name: "Sonu Sharma",
       designation: "Wallpanel installation",
-      src: "/Person/Man3.png",
+      src: "/Person/Person1.png",
     },
     {
       quote:
         "Great quality wallpaper and excellent installation service! My walls look stunning, and the entire process was smooth and hassle-free.",
       name: "Sudhir Kumar Singh",
       designation: "Wallpaper service",
-      src: "/Person/Man4.jpg",
+      src: "/Person/Person2.jpg",
     },
     {
       quote:
         "Fantastic work! The false ceiling looks stunning, and the installation was smooth. It has added a classy touch to my home. Highly recommended!",
       name: "Prashant Pandey",
       designation: "False-celling installation",
-      src: "/Person/Man1.jpg",
+      src: "/Person/Man3.png",
     },
     {
       quote:
