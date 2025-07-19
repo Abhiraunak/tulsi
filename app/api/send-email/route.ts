@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
     try {
         const { data, error } = await resend.emails.send({
-            from: `Tulsi <no-reply@hellotulsi.in`,
+            from: `Tulsi <no-reply@hellotulsi.in>`,
             to: [adminEmail],
             subject: `New Booking: ${service}`,
             react: ConfirmationEmail({ name, phoneNumber, service, address }),
