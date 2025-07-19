@@ -92,6 +92,13 @@ export default function Services() {
                 transition: Bounce,
             });
 
+            // Send admin notification email
+            const emailRes = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
             // Reset form 
             setFormData({ name: "", phoneNumber: "", service: "", address: "" });
 

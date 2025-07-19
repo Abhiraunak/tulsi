@@ -58,16 +58,8 @@ export async function POST(req: NextRequest) {
             { status: 201 }
         );
 
-    } catch (e: any) {
+    } catch (e) {
         console.error("Booking Error:", e);
-        
-        // Handle Prisma errors
-        if (e.code === 'P2002') {
-            return NextResponse.json(
-                { message: "Duplicate booking detected" },
-                { status: 409 }
-            );
-        }
 
         return NextResponse.json(
             { message: "Internal server error" },
