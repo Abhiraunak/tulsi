@@ -1,15 +1,15 @@
 "use client"
 import { useState } from "react";
 import ProductAppbar from "@/components/ProductAppbar";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import WhatsappButton from "@/components/WhatsAppIntegration";
 import { z } from "zod";
 import { Bounce, toast } from "react-toastify";
+import { Group } from "@/components/Utility/Group";
+import { Label } from "@/components/Utility/Label";
+import { Input } from "@/components/Utility/Input";
+import { Button } from "@/components/Utility/Button";
+import { cn } from "@/lib/utils";
 
 const bookingSchema = z.object({
     name: z.string().min(5, "Name must be at least 5 characters"), // Changed from 3 to 5
@@ -123,85 +123,65 @@ export default function Services() {
         <div className="overflow-x-hidden">
             <ProductAppbar heading={"Book a Service"} />
             <WhatsappButton />
-            <div className="bg-slate-800 min-h-[105vh] md:h-screen w-full py-8 md:py-0 mt-10">
-                <div className="flex justify-center items-center w-full h-full px-2 sm:px-4">
-                    <div className="w-full max-w-md mx-auto">
-                        <BackgroundGradient>
-                            <Card className="w-full max-w-[25rem] rounded-2xl">
-                                <CardContent>
-                                    <div className="py-4">
-                                        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tighter">
-                                            Book a service
-                                        </h1>
-                                    </div>
-                                    <form onSubmit={handleSubmit} className="space-y-3">
-                                        <div>
-                                            <Label htmlFor="name" className="font-semibold tracking-tight text-base sm:text-lg">Name</Label>
-                                            <Input
-                                                type="text"
-                                                name="name"
-                                                placeholder="Enter your Name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                                className="text-sm sm:text-base"
-                                            />
-                                        </div>
-                                        <div>
-                                            <Label htmlFor="phoneNumber" className="font-semibold tracking-tight text-base sm:text-lg">Phone Number</Label>
-                                            <Input
-                                                type="text"
-                                                name="phoneNumber"
-                                                placeholder="Phone Number"
-                                                value={formData.phoneNumber}
-                                                onChange={handleChange}
-                                                required
-                                                className="text-sm sm:text-base"
-                                            />
-                                        </div>
-                                        <div className="container relative">
-                                            <Label htmlFor="services" className="font-semibold tracking-tight text-base sm:text-lg">Services</Label>
-                                            <Select name="service" value={formData.service} onValueChange={handleServiceChange}>
-                                                <SelectTrigger className="w-full text-sm sm:text-base">
-                                                    <SelectValue placeholder="Choose a Service" />
-                                                </SelectTrigger>
-                                                <SelectContent>
-                                                    <SelectItem value="WallPaint">Wall Paint</SelectItem>
-                                                    <SelectItem value="WallPanel">Wall Panel</SelectItem>
-                                                    <SelectItem value="WallPaper">WallPaper</SelectItem>
-                                                    <SelectItem value="FalseCeiling">False Ceiling</SelectItem>
-                                                    <SelectItem value="Flooring">Flooring</SelectItem>
-                                                </SelectContent>
-                                            </Select>
-                                        </div>
-                                        <div>
-                                            <Label htmlFor="address" className="font-semibold tracking-tight text-base sm:text-lg">Address</Label>
-                                            <Input
-                                                type="text"
-                                                name="address"
-                                                placeholder="Address"
-                                                value={formData.address}
-                                                onChange={handleChange}
-                                                required
-                                                className="text-sm sm:text-base"
-                                            />
-                                        </div>
-                                        <div className="pt-5">
-                                            <Button
-                                                type="submit"
-                                                className="w-full rounded-sm bg-green-900 hover:bg-green-950 hover:font-semibold text-sm sm:text-base"
-                                                disabled={loading}
-                                            >
-                                                {loading ? "Booking ...." : "Book your service"}
-                                            </Button>
-                                        </div>
-                                    </form>
-                                </CardContent>
-                            </Card>
-                        </BackgroundGradient>
-                    </div>
+            <form onSubmit={handleSubmit} className="min-h-screen mx-auto w-full bg-netural-50 px-8 py-14 bg-green-50 mt-10">
+                <h1 className="text-5xl text-center font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-700">
+                    Book a {" "}
+                    <span className={cn(
+                        "inline-block relative z-10 text-white",
+                        "after:content-[''] after:-z-10 after:absolute after:inset-0 after:w-full after:h-full after:bg-green-400 after:skew-20"
+                    )}>
+                        Service
+                    </span>
+                </h1>
+                <div className="flex flex-col my-2 gap-5 max-w-sm mx-auto mt-5">
+                    <Group>
+                        <Label className="after:content-['*'] after:ml-0.5 after:text-red-600">Name</Label>
+                        <Input
+                            type="text"
+                            placeholder="Enter your name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </Group>
+                    <Group>
+                        <Label className="after:content-['*'] after:ml-0.5 after:text-red-600">Phone Number</Label>
+                        <Input
+                            type="text"
+                            placeholder="Enter your Phone Number"
+                            value={formData.phoneNumber}
+                            onChange={handleChange}
+                            required
+                        />
+                    </Group>
+                    <Group>
+                        <Label className="after:content-['*'] after:ml-0.5 after:text-red-600">Address</Label>
+                        <Input
+                            type="text"
+                            value={formData.address}
+                            onChange={handleChange}
+                            required
+                            placeholder="Enter your Address"
+                        />
+                    </Group>
+                    <Group>
+                        <Label className="after:content-['*'] after:ml-0.5 after:text-red-600">Service</Label>
+                        <Select name="service" value={formData.service} onValueChange={handleServiceChange}>
+                            <SelectTrigger className="w-full text-sm sm:text-base border-transparent px-4 py-4 bg-white rounded-md shadow-input transition-all duration-200 placeholder:text-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:ring-offset-2 border focus:border-neutral-300 focus:bg-neutral-100">
+                                <SelectValue placeholder="Choose a Service" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="WallPaint">Wall Paint</SelectItem>
+                                <SelectItem value="WallPanel">Wall Panel</SelectItem>
+                                <SelectItem value="WallPaper">WallPaper</SelectItem>
+                                <SelectItem value="FalseCeiling">False Ceiling</SelectItem>
+                                <SelectItem value="Flooring">Flooring</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </Group>
+                    <Button >Book your service</Button>
                 </div>
-            </div>
+            </form>
         </div>
     );
 }
