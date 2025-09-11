@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
                 data: {
                     name: name.trim(),
                     phoneNumber: phoneNumber.trim(),
-                    service: s.trim(), // Create a separate record for each service
+                    service,
                     address: address.trim(),
                     timeStamp: new Date(),
                 },
