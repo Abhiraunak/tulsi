@@ -78,15 +78,17 @@ export default function SignIn() {
                             placeholder="Email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                         <Input type="password"
                             placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            required
                         />
 
                         <button
-                            className="w-full h-10 rounded-md bg-green-700 hover:bg-green-900 text-white font-semibold"
+                            className="w-full h-10 rounded-md bg-green-700 hover:bg-green-900 cursor-pointer transition duration-150 hover:-translate-y-0.5 active:scale-95 text-white font-semibold"
                             onClick={handleLogin}
                         >
                             Sign In

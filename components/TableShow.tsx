@@ -44,17 +44,17 @@ export default function TableShow() {
 
 
   return (
-    <Table>
-      <TableCaption>A list of our recent booking.</TableCaption>
-      <TableHeader>
-        <TableRow>
-          <TableHead className="w-[200px] font-extrabold text-xl text-green-800">Name</TableHead>
-          <TableHead className="w-[200px] font-extrabold text-xl text-green-800">Phone Number</TableHead>
-          <TableHead className="w-[500px] font-extrabold text-xl text-green-800">Address</TableHead>
-          <TableHead className="w-[200px] font-extrabold text-xl text-green-800">Service</TableHead>
+    <Table className="bg-white text-gray-800 p-6 rounded-lg shadow-md animate-fade-in">
+      <TableCaption className="text-2xl font-bold mb-4">A list of our recent booking.</TableCaption>
+      <TableHeader className="mt-2">
+        <TableRow className="bg-gray-200">
+          <TableHead className="w-[200px] font-extrabold text-xl text-gray-800">Name</TableHead>
+          <TableHead className="w-[200px] font-extrabold text-xl text-gray-800">Phone Number</TableHead>
+          <TableHead className="w-[500px] font-extrabold text-xl text-gray-800">Address</TableHead>
+          <TableHead className="w-[200px] font-extrabold text-xl text-gray-800">Service</TableHead>
         </TableRow>
       </TableHeader>
-      <TableBody>
+      <TableBody className="text-gray-600">
         {bookings.map((booking) => (
           <TableRow key={booking.id}>
             <TableCell className="font-medium">{booking.name}</TableCell>
