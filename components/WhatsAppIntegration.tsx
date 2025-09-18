@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function WhatsappButton() {
-    const phoneNumber = "+91 97176 54551"; // Replace with your phone number
+    const phoneNumber = process.env.ADMIN_WHATSAPP_NUM;
     const message = "Hello Team Tulsi, I want to know more about your home interior design/renovation services.";
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
